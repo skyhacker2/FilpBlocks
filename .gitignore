@@ -1,0 +1,7 @@
+frameworks/cocos2d-x
+frameworks/runtime-src/proj.android/obj
+frameworks/runtime-src/proj.android/bin
+frameworks/runtime-src/proj.android/assets
+runtime/
+
+.DS_Store
