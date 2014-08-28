@@ -40,6 +40,7 @@ local function main()
     end
     
     -- run
+    require("src/G")
 	
 	if cc.Director:getInstance():getRunningScene() then
 		cc.Director:getInstance():replaceScene(require("src/GameLayer").scene())

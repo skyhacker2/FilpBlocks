@@ -21,11 +21,11 @@ AppDelegate::~AppDelegate()
 
 bool AppDelegate::applicationDidFinishLaunching()
 {
-    
+
 #if (COCOS2D_DEBUG>0)
     initRuntime();
 #endif
-    
+
     if (!ConfigParser::getInstance()->isInit()) {
             ConfigParser::getInstance()->readConfig();
         }
@@ -58,7 +58,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     //register custom function
     //LuaStack* stack = engine->getLuaStack();
     //register_custom_function(stack->getLuaState());
-    
+
 #if (COCOS2D_DEBUG>0)
     if (startRuntime())
         return true;
