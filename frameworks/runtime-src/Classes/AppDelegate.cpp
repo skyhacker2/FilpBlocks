@@ -4,6 +4,7 @@
 #include "cocos2d.h"
 #include "Runtime.h"
 #include "ConfigParser.h"
+#include "lua_custom_manual.h"
 
 using namespace CocosDenshion;
 
@@ -58,6 +59,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     //register custom function
     //LuaStack* stack = engine->getLuaStack();
     //register_custom_function(stack->getLuaState());
+    LuaStack* stack = engine->getLuaStack();
+    register_all_custom_manual(stack->getLuaState());
 
 #if (COCOS2D_DEBUG>0)
     if (startRuntime())

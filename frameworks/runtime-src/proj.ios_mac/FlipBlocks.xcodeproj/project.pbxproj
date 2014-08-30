@@ -50,6 +50,9 @@
 		50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */; };
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
+		A51E19EE19B1CDA500D0D22E /* AdManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E19EC19B1CDA500D0D22E /* AdManager.cpp */; };
+		A5D5845619B030DD008F2AE4 /* lua_custom_manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D5845219B030DD008F2AE4 /* lua_custom_manual.cpp */; };
+		A5D5845719B030DD008F2AE4 /* Vibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D5845419B030DD008F2AE4 /* Vibrator.cpp */; };
 		C033B51C191B337200D06937 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C033B51A191B337200D06937 /* VisibleRect.cpp */; };
 		C033B51D191B337200D06937 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C033B51A191B337200D06937 /* VisibleRect.cpp */; };
 		C03781B918BF655400FE4F13 /* res in Resources */ = {isa = PBXBuildFile; fileRef = C03781B718BF655400FE4F13 /* res */; };
@@ -348,6 +351,13 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		A51E19EC19B1CDA500D0D22E /* AdManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdManager.cpp; path = ../Classes/AdManager.cpp; sourceTree = "<group>"; };
+		A51E19ED19B1CDA500D0D22E /* AdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdManager.h; path = ../Classes/AdManager.h; sourceTree = "<group>"; };
+		A52B84C519B1D18E00513B33 /* AppMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppMacro.h; path = ../Classes/AppMacro.h; sourceTree = "<group>"; };
+		A5D5845219B030DD008F2AE4 /* lua_custom_manual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lua_custom_manual.cpp; path = ../Classes/lua_custom_manual.cpp; sourceTree = "<group>"; };
+		A5D5845319B030DD008F2AE4 /* lua_custom_manual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lua_custom_manual.h; path = ../Classes/lua_custom_manual.h; sourceTree = "<group>"; };
+		A5D5845419B030DD008F2AE4 /* Vibrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vibrator.cpp; path = ../Classes/Vibrator.cpp; sourceTree = "<group>"; };
+		A5D5845519B030DD008F2AE4 /* Vibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vibrator.h; path = ../Classes/Vibrator.h; sourceTree = "<group>"; };
 		C033B51A191B337200D06937 /* VisibleRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VisibleRect.cpp; path = ../Classes/VisibleRect.cpp; sourceTree = "<group>"; };
 		C033B51B191B337200D06937 /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VisibleRect.h; path = ../Classes/VisibleRect.h; sourceTree = "<group>"; };
 		C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_lua_bindings.xcodeproj; path = "../../cocos2d-x/cocos/scripting/lua-bindings/proj.ios_mac/cocos2d_lua_bindings.xcodeproj"; sourceTree = "<group>"; };
@@ -629,6 +639,13 @@
 		F293BB7C15EB830F00256477 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A52B84C519B1D18E00513B33 /* AppMacro.h */,
+				A51E19EC19B1CDA500D0D22E /* AdManager.cpp */,
+				A51E19ED19B1CDA500D0D22E /* AdManager.h */,
+				A5D5845219B030DD008F2AE4 /* lua_custom_manual.cpp */,
+				A5D5845319B030DD008F2AE4 /* lua_custom_manual.h */,
+				A5D5845419B030DD008F2AE4 /* Vibrator.cpp */,
+				A5D5845519B030DD008F2AE4 /* Vibrator.h */,
 				C033B51A191B337200D06937 /* VisibleRect.cpp */,
 				C033B51B191B337200D06937 /* VisibleRect.h */,
 				C06C3794191A1D1E00617BED /* ConfigParser.cpp */,
@@ -956,10 +973,13 @@
 				F293BB9C15EB831F00256477 /* AppDelegate.cpp in Sources */,
 				C06C3796191A1D1E00617BED /* ConfigParser.cpp in Sources */,
 				5023812417EBBCAC00990C9B /* main.m in Sources */,
+				A5D5845719B030DD008F2AE4 /* Vibrator.cpp in Sources */,
 				C033B51C191B337200D06937 /* VisibleRect.cpp in Sources */,
 				C0619CD71896894800872C26 /* Runtime_ios-mac.mm in Sources */,
 				C07828FD18B4DC6F00BD2287 /* Runtime.cpp in Sources */,
 				5023811817EBBCAC00990C9B /* AppController.mm in Sources */,
+				A51E19EE19B1CDA500D0D22E /* AdManager.cpp in Sources */,
+				A5D5845619B030DD008F2AE4 /* lua_custom_manual.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
