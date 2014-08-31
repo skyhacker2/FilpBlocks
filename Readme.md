@@ -10,4 +10,8 @@
 6. 游戏退出的时候需要记录目前的状态和时间。
 7. 游戏再次启动的时候，检测之前是否有记录，有的话恢复之前的状态。
 
+本项目使用了cocos2d-x 3.1.1 和 code ide
+在publish有编译好的apk文件。
+
+
 ![image](http://git.oschina.net/nov_eleven/photo/raw/master/flip.gif)
