@@ -2,7 +2,7 @@
 local MapLayer = class("MapLayerLayer",function() return cc.Layer:create() end)
 local Block = require("src/Block")
 local ws = cc.Director:getInstance():getWinSize()
-
+local scheduler = cc.Director:getInstance():getScheduler()
 function MapLayer:ctor(opt)
     cclog("MapLayer:ctor")
     local opt = opt or {}
@@ -16,6 +16,10 @@ function MapLayer:ctor(opt)
     self:init(opt)
     self:initBlocks(opt)
     self:bindEvent()
+    
+    -- 测试
+    --math.randomseed(os.time())
+    --self._testId = scheduler:scheduleScriptFunc(function() self:test() end,0.01, false)
 end
 
 function MapLayer:init(opt)
@@ -25,18 +29,18 @@ function MapLayer:init(opt)
     
     -- 闹钟
     local clock = cc.Sprite:create("res/clock.png")
-    clock:setPosition(50,ws.height/1.22)
+    clock:setPosition(50,ws.height/1.23)
     self:addChild(clock)
-    self.timeLabel = cc.Label:createWithTTF("00:00","res/font/DroidSansFallback.ttf",60)
+    self.timeLabel = cc.Label:createWithTTF("00:00","res/font/BradleyHandITC.TTF",60)
     self.timeLabel:setAnchorPoint(0.5, 0.5)
-    self.timeLabel:setPosition(180, ws.height/1.22)
+    self.timeLabel:setPosition(180, ws.height/1.23)
     self:addChild(self.timeLabel)
 
     -- 重新开始按钮
     self.restartMenu = cc.MenuItemImage:create("res/restart_btn.png","res/restart_btn.png")
     
     local menu = cc.Menu:create(self.restartMenu)
-    menu:setPosition(ws.width/1.3,ws.height/1.22)
+    menu:setPosition(ws.width/1.2,ws.height/1.23)
     self:addChild(menu)
     
     self:scheduleUpdateWithPriorityLua(function(dt) self:update(dt) end,0)
@@ -53,7 +57,7 @@ function MapLayer:initBlocks(opt)
                      self._breakLength + blockSize/2
     local startPty = self._bg:getPositionY() - self._bg:getContentSize().height/2 +
                      self._breakLength + blockSize/2
-                     
+                         
     for i = 1, self._size do
         local y = startPty + (i-1) * blockSize + (i-1) * self._breakLength
         self._blocks[i] = {}
@@ -67,10 +71,11 @@ function MapLayer:initBlocks(opt)
             self._blocks[i][j] = block
         end
     end
+    --self:touchIn(1,1)
 end
 
 -- 判断矩阵是否都是一样，游戏结束
-function MapLayer:isGameOver() 
+function MapLayer:isWin() 
     local result = {0, 0, 0}
     for i = 1, #self._blocks do
         for j = 1, #self._blocks[i] do
@@ -84,6 +89,77 @@ function MapLayer:isGameOver()
         end
     end
     return false
+end
+
+-- 胜利动画
+function MapLayer:win()
+    
+    -- 胜利页面
+    local scheduleId = nil
+    function createWinLayer()
+        local line = cc.Sprite:create("res/line.png")
+        line:setPosition(ws.width/2,760)
+        self:addChild(line)
+        -- 时间标签
+        local timeLabel = cc.Label:createWithTTF("Time","res/font/BradleyHandITC.TTF", 60)
+        timeLabel:setColor(cc.c3b(113,140,142))
+        timeLabel:setPosition(ws.width/2,700)
+        local time = cc.Label:createWithTTF(G.formatTime(self._usedTime),"res/font/BradleyHandITC.TTF",38)
+        time:setColor(cc.c3b(113,140,142))
+        time:setPosition(ws.width/2,660)
+        self:addChild(timeLabel)
+        self:addChild(time)
+        
+        -- 最好时间
+        local best = cc.UserDefault:getInstance():getDoubleForKey("time_"..self._size,999999999)
+        if best > self._usedTime then
+            best = self._usedTime
+            cc.UserDefault:getInstance():setDoubleForKey("time_"..self._size,best)
+        end
+        local bestLabel = cc.Label:createWithTTF("Best","res/font/BradleyHandITC.TTF",60)
+        bestLabel:setPosition(ws.width/2,590)
+        bestLabel:setColor(cc.c3b(113,140,142))
+        self:addChild(bestLabel)
+        local best = cc.Label:createWithTTF(G.formatTime(self._usedTime),"res/font/BradleyHandITC.TTF",38)
+        best:setColor(cc.c3b(113,140,142))
+        best:setPosition(ws.width/2,550)
+        self:addChild(best)
+        --按钮
+        local okBtn = ccui.Button:create("res/ok_btn.png")
+        okBtn:setPosition(ws.width/3,450)
+        okBtn:addTouchEventListener(function(sender, event)
+            if event == ccui.TouchEventType.ended then
+                self:unscheduleUpdate()
+                if self.restartCallback ~= nil then
+                    self.restartCallback(self)
+                end
+            end 
+        end)
+        self:addChild(okBtn)
+        
+        -- 分享
+        local shareBtn = ccui.Button:create("res/share_btn.png")
+        shareBtn:setPosition(ws.width/3*2,450)
+        self:addChild(shareBtn)
+        scheduler:unscheduleScriptEntry(scheduleId)
+    end
+    scheduleId = scheduler:scheduleScriptFunc(createWinLayer,0.4,false)
+    
+    function createWinAction(pos)
+        local angle = math.random(0,360)
+        local t = math.random(1,2) 
+        local spawn = cc.Spawn:create(
+            cc.MoveTo:create(t, cc.p(pos.x,pos.y - 1000)), 
+            cc.RotateTo:create(t, angle)
+        )
+        return cc.Sequence:create(cc.DelayTime:create(0.4),spawn)
+    end
+    for i = 1, #self._blocks do
+        for j = 1, #self._blocks[i] do
+            local x, y = self._blocks[i][j]:getPositionX(), self._blocks[i][j]:getPositionY()
+            self._blocks[i][j]:runAction(createWinAction(cc.p(x,y)))
+        end
+    end
 end
 
 function MapLayer:touchIn(x, y)
@@ -124,12 +200,13 @@ end
 
 -- 更新函数
 function MapLayer:update(dt)
-    if self:isGameOver() then
+    if self:isWin() then
+        self:unscheduleUpdate()
+        self:win()
+        --scheduler:unscheduleScriptEntry(self._testId)
         return
     end
-    local now = os.time()
-    local interval = now -  self._preTime
-    self._usedTime = self._usedTime + interval
+    self._usedTime = self._usedTime + dt
     self._preTime = now
     local displayText = G.formatTime(self._usedTime)
     self.timeLabel:setString(displayText)
@@ -145,7 +222,11 @@ function MapLayer:bindEvent()
     end)
     -- 注册触摸事件
     function onTouchBegan(touch, event)
-        return true
+        if self:isVisible() then
+            return true
+        else
+            return false
+        end
     end
     function onTouchEnded(touch, event)
         self:onTouchEnded(touch, event)
@@ -157,5 +238,12 @@ function MapLayer:bindEvent()
     local dispatcher = self:getEventDispatcher()
     dispatcher:addEventListenerWithSceneGraphPriority(listener, self)
 end
+
+-- 测试
+function MapLayer:test()
+    local x, y = math.random(1,self._size), math.random(1,self._size)
+    self:touchIn(x, y)
+end
+
 
 return MapLayer

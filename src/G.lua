@@ -9,7 +9,7 @@ function G.formatTime(second)
     else
         mm = '' .. mm
     end
-    local ss = second % 60
+    local ss = math.floor(second % 60)
     if ss < 10 then
         ss = '0' .. ss
     else

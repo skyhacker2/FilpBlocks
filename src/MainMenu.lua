@@ -10,20 +10,36 @@ function MainMenu:ctor()
 end
 
 function MainMenu:initMenu()
-    local simpleLabel = cc.Label:createWithTTF("简 单","res/font/DroidSansFallback.ttf", 90)
-    self.simpleMenu = cc.MenuItemLabel:create(simpleLabel)
-    self.simpleMenu:setPosition(0,150)
+    local function createMenuAction(pos, delay)
+
+        local action = cc.Sequence:create(
+            cc.DelayTime:create(delay),
+            cc.MoveTo:create(0.2,cc.p(pos.x,pos.y - 200)), 
+            cc.EaseElasticOut:create(cc.MoveTo:create(1.5,pos))  
+        )
+        return action
+    end
     
-    local middleLabel = cc.Label:createWithTTF("中 等","res/font/DroidSansFallback.ttf", 90)
-    self.middleMenu = cc.MenuItemLabel:create(middleLabel)
-    self.middleMenu:setPosition(0,0)
+    self.simpleMenu = ccui.Button:create("res/easy_btn.png")
+    self.simpleMenu:setPosition(ws.width/2, 0) 
+    self.simpleMenu:runAction(createMenuAction(cc.p(ws.width/2,800), 0))
+    self:addChild(self.simpleMenu)
     
-    local hardLabel = cc.Label:createWithTTF("困 难","res/font/DroidSansFallback.ttf", 90)
-    self.hardMenu = cc.MenuItemLabel:create(hardLabel)
-    self.hardMenu:setPosition(0,-150)
+    self.mediumMenu = ccui.Button:create("res/medium_btn.png")
+    self.mediumMenu:setPosition(ws.width/2,-100)
+    self.mediumMenu:runAction(createMenuAction(cc.p(ws.width/2, 650), 0.1))
+    self:addChild(self.mediumMenu)
     
-    local menu = cc.Menu:create(self.simpleMenu, self.middleMenu, self.hardMenu)
-    self:addChild(menu)
+    self.hardMenu = ccui.Button:create("res/hard_btn.png")
+    self.hardMenu:setPosition(ws.width/2, -200)
+    self.hardMenu:runAction(createMenuAction(cc.p(ws.width/2,500),0.2))
+    self:addChild(self.hardMenu)
+    
+    self.settingMenu = ccui.Button:create("res/setting_btn.png")
+    self.settingMenu:setPosition(ws.width/2,-300) 
+    self.settingMenu:runAction(createMenuAction(cc.p(ws.width/2,350),0.3))
+    self:addChild(self.settingMenu)
 end
+
 
 return MainMenu

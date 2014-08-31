@@ -14,15 +14,23 @@ function FlipLayer:ctor()
 end
 
 function FlipLayer:bindMenuEvent()
-    self._menuLayer.simpleMenu:registerScriptTapHandler(function()
-        self:initMapLayer{size=3}
-    end)
-    self._menuLayer.middleMenu:registerScriptTapHandler(function()
-        self:initMapLayer{size=5} 
-    end)
-    self._menuLayer.hardMenu:registerScriptTapHandler(function()
-        self:initMapLayer{size=9} 
-    end)
+    local function onMenuTouch(sender, event)
+        if event ~= ccui.TouchEventType.ended then
+            return
+        end
+        if sender == self._menuLayer.simpleMenu then
+            self:initMapLayer{size=3}
+        end
+        if sender == self._menuLayer.mediumMenu then
+            self:initMapLayer{size=5}
+        end
+        if sender == self._menuLayer.hardMenu then
+            self:initMapLayer{size=9}
+        end
+    end
+    self._menuLayer.simpleMenu:addTouchEventListener(onMenuTouch)
+    self._menuLayer.mediumMenu:addTouchEventListener(onMenuTouch)
+    self._menuLayer.hardMenu:addTouchEventListener(onMenuTouch)
 end
 
 function FlipLayer:initMapLayer(opt)
