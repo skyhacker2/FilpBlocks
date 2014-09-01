@@ -27,10 +27,14 @@ function FlipLayer:bindMenuEvent()
         if sender == self._menuLayer.hardMenu then
             self:initMapLayer{size=9}
         end
+        if sender == self._menuLayer.settingMenu then
+            self._menuLayer:toggleSubMenu()
+        end
     end
     self._menuLayer.simpleMenu:addTouchEventListener(onMenuTouch)
     self._menuLayer.mediumMenu:addTouchEventListener(onMenuTouch)
     self._menuLayer.hardMenu:addTouchEventListener(onMenuTouch)
+    self._menuLayer.settingMenu:addTouchEventListener(onMenuTouch)
 end
 
 function FlipLayer:initMapLayer(opt)
