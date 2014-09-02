@@ -112,6 +112,7 @@ function MapLayer:win()
         
         -- 最好时间
         local best = cc.UserDefault:getInstance():getDoubleForKey("time_"..self._size,999999999)
+        print(best)
         if best > self._usedTime then
             best = self._usedTime
             cc.UserDefault:getInstance():setDoubleForKey("time_"..self._size,best)
@@ -120,7 +121,7 @@ function MapLayer:win()
         bestLabel:setPosition(ws.width/2,590)
         bestLabel:setColor(cc.c3b(113,140,142))
         self:addChild(bestLabel)
-        local best = cc.Label:createWithTTF(G.formatTime(self._usedTime),"res/font/BradleyHandITC.TTF",38)
+        local best = cc.Label:createWithTTF(G.formatTime(best),"res/font/BradleyHandITC.TTF",38)
         best:setColor(cc.c3b(113,140,142))
         best:setPosition(ws.width/2,550)
         self:addChild(best)
