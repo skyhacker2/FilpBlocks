@@ -52,7 +52,7 @@ function MainMenu:initSubMenu()
         return cc.MenuItemLabel:create(label)
     end
     
-    local x, y, marginTop = ws.width + 200, 650, 100
+    local x, y, marginTop = ws.width/2, -100, 100
     self.vibrationMenu = createMenu("Vibration: On")
     self.vibrationMenu:setPosition(x, y)
     y = y - marginTop
@@ -101,43 +101,81 @@ local function createMoveInAction(pos, delay)
     )
 end
 
-local  function createMoveFunc(pos, delay)
+local  function createMoveUpAction(pos, delay)
     return cc.Sequence:create(
         cc.DelayTime:create(delay),
-        cc.MoveTo:create(0.3,pos) 
+        cc.EaseOut:create(cc.MoveTo:create(0.2,pos), 2.5) 
     )
 end
 
 function MainMenu:showSubMenu()
-    
+    self:stopMenusActions()
     local x, y = self.simpleMenu:getPosition()
-    self.simpleMenu:runAction(createMoveOutAction(cc.p(x-450,y),0))
+    self.simpleMenu:runAction(createMoveOutAction(cc.p(-120,y),0))
     
     x, y = self.mediumMenu:getPosition()
-    self.mediumMenu:runAction(createMoveOutAction(cc.p(x-450,y),0.05))
+    self.mediumMenu:runAction(createMoveOutAction(cc.p(-120,y),0.05))
     
     x, y = self.hardMenu:getPosition()
-    self.hardMenu:runAction(createMoveOutAction(cc.p(x-450,y),0.1))
+    self.hardMenu:runAction(createMoveOutAction(cc.p(-120,y),0.1))
     
     x, y = self.settingMenu:getPosition()
-    self.settingMenu:runAction(createMoveFunc(cc.p(x,800),0.15))
+    self.settingMenu:runAction(createMoveUpAction(cc.p(x,800),0.15))
+    
+    -- 子菜单
+    x, y = self.vibrationMenu:getPosition()
+    self.vibrationMenu:runAction(createMoveUpAction(cc.p(x, 650),0.15))
+    
+    x, y = self.musicMenu:getPosition()
+    self.musicMenu:runAction(createMoveUpAction(cc.p(x,550),0.15))
+    
+    x, y = self.colorNumMenu:getPosition()
+    self.colorNumMenu:runAction(createMoveUpAction(cc.p(x,450), 0.15))
+    
+    x, y = self.rateMenu:getPosition()
+    self.rateMenu:runAction(createMoveUpAction(cc.p(x,350),0.15))
 end
 
 function MainMenu:hideSubMenu()
-    
+    self:stopMenusActions()
     local x, y = self.simpleMenu:getPosition()
     print(x, y)
-    self.simpleMenu:runAction(createMoveInAction(cc.p(x+450,y),0.2))
+    self.simpleMenu:runAction(createMoveInAction(cc.p(ws.width/2,y),0.2))
 
     x, y = self.mediumMenu:getPosition()
-    self.mediumMenu:runAction(createMoveInAction(cc.p(x+450,y),0.3))
+    self.mediumMenu:runAction(createMoveInAction(cc.p(ws.width/2,y),0.3))
 
     x, y = self.hardMenu:getPosition()
-    self.hardMenu:runAction(createMoveInAction(cc.p(x+450,y),0.4))
+    self.hardMenu:runAction(createMoveInAction(cc.p(ws.width/2,y),0.4))
     
     x, y = self.settingMenu:getPosition()
-    self.settingMenu:runAction(createMoveFunc(cc.p(x,350),0))
+    self.settingMenu:runAction(createMoveInAction(cc.p(x,350),0))
+    
+    -- 子菜单
+    x, y = self.vibrationMenu:getPosition()
+    self.vibrationMenu:runAction(createMoveOutAction(cc.p(x, -100),0))
+
+    x, y = self.musicMenu:getPosition()
+    self.musicMenu:runAction(createMoveOutAction(cc.p(x,-100),0))
+    
+    x, y = self.colorNumMenu:getPosition()
+    self.colorNumMenu:runAction(createMoveOutAction(cc.p(x,-100), 0))
+
+    x, y = self.rateMenu:getPosition()
+    self.rateMenu:runAction(createMoveOutAction(cc.p(x,-100),0))
+    
+    
 end
 
+function MainMenu:stopMenusActions()
+    self.simpleMenu:stopAllActions()
+    self.mediumMenu:stopAllActions()
+    self.hardMenu:stopAllActions()
+    self.settingMenu:stopAllActions()
+    self.vibrationMenu:stopAllActions()
+    self.musicMenu:stopAllActions()
+    self.colorNumMenu:stopAllActions()
+    self.rateMenu:stopAllActions()
+end
 
 return MainMenu

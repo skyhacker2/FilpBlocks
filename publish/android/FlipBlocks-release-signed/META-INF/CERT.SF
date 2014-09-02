@@ -1,0 +1,202 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA1-Digest-Manifest: lDIjUSQqds1qRhXiBigh3Ox0whI=
+
+Name: assets/src/MainMenu.lua
+SHA1-Digest: HRXW8ZN6qu6094tTGO4Ogj3pc6M=
+
+Name: assets/json.lua
+SHA1-Digest: 6f1Q5/1BNYSncGF1NcjxqgPMRmM=
+
+Name: assets/OpenglConstants.lua
+SHA1-Digest: Qy8UGB6YKjm2sj4/STnq9AxbI+4=
+
+Name: assets/src/GameLayer.lua
+SHA1-Digest: lVeenYsy+9ZUFV9DIpAv/NOREns=
+
+Name: assets/res/font/DroidSansFallback.ttf
+SHA1-Digest: XkEGu8hphutEW8O4Fz2vhHHiiFU=
+
+Name: assets/AudioEngine.lua
+SHA1-Digest: bhU1MDS02AuoAkuZW3FN92IBKnM=
+
+Name: assets/CocoStudio.lua
+SHA1-Digest: Vxk/E4627GPtXFQ+YHgQUHzF5y4=
+
+Name: assets/res/block1.png
+SHA1-Digest: lsFE2dAPkzQGyR1CuitjRX+uPC4=
+
+Name: assets/rtres/landscape.png
+SHA1-Digest: IrIce6EOMJOxvSbLD2rUr9FPCKY=
+
+Name: assets/CCBReaderLoad.lua
+SHA1-Digest: DrktSC3CrvnmFY8HnNXE+dXWmns=
+
+Name: assets/luaoc.lua
+SHA1-Digest: AHUaw3nINcBOM1g683cANWqJMw4=
+
+Name: assets/GuiConstants.lua
+SHA1-Digest: TdoR0+1SAkWg+svDX1INcGp9GWo=
+
+Name: res/drawable-ldpi/icon.png
+SHA1-Digest: xwIhrHpewN2eB9gy6BE4zgo6t94=
+
+Name: assets/ltn12.lua
+SHA1-Digest: GJx3FV1JM1C2LStdwd5SeWF9WxM=
+
+Name: assets/smtp.lua
+SHA1-Digest: 90w3MpWG4TBunlh+Hp6fznlwl+Q=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: T2tP4hW6FbMj4gddP2NXXsbhDqI=
+
+Name: assets/res/setting_btn.png
+SHA1-Digest: ORaxykR/dirtctoSUTTYv/uHfI4=
+
+Name: assets/src/FlipLayer.lua
+SHA1-Digest: ERslx2P+1drmNZjUaLKDssP0dIo=
+
+Name: assets/rtres/Play1.png
+SHA1-Digest: kOabirkeFeqUBSP99CPHRRD8sZA=
+
+Name: assets/Cocos2dConstants.lua
+SHA1-Digest: 3hIp0AYEe7DK9mivqO88qsuaTh4=
+
+Name: assets/Cocos2d.lua
+SHA1-Digest: zVLG9l28sWJ0TcIc5mJ/kPzkhVg=
+
+Name: assets/src/main.lua
+SHA1-Digest: 4XX1Bhy8cjqrNw+XPchqD6HSQtc=
+
+Name: assets/res/hard_btn.png
+SHA1-Digest: DK3mG6H1HJa5ptw6Wy17eWT1AgQ=
+
+Name: assets/rtres/portrait.png
+SHA1-Digest: xC14xT+7kar+bjDk/fpslmHO8DE=
+
+Name: assets/res/clock.png
+SHA1-Digest: RorZY59fJp++lyLF6Kp2iwInpOA=
+
+Name: assets/src/G.lua
+SHA1-Digest: IsEEWqh31RVxIN96zE0ovc7diwo=
+
+Name: assets/extern.lua
+SHA1-Digest: KjGlboVMwtVd9SNfFeddyJDvNOg=
+
+Name: assets/url.lua
+SHA1-Digest: FTNvPk9W0U1iLQYU6L1W6cM9qlU=
+
+Name: assets/src/MapLayer.lua
+SHA1-Digest: IpiDI9v0NyThVK/9c0CJBAAbxp4=
+
+Name: assets/res/block3.png
+SHA1-Digest: sVVRTemCzJhcrwrbnNtsHPceKgI=
+
+Name: assets/luaj.lua
+SHA1-Digest: KkjAc3t77Vz5QgFwc4liIkQIKKI=
+
+Name: assets/res/restart_btn.png
+SHA1-Digest: GUTxa7duGTJipuDhIE509Ij12YM=
+
+Name: assets/DeprecatedOpenglEnum.lua
+SHA1-Digest: +8x8KjwdD3zIOrTDgsPNQd3Eibg=
+
+Name: assets/DeprecatedEnum.lua
+SHA1-Digest: evH9PXzvtquU8NpstekWJ0eNJ/8=
+
+Name: assets/http.lua
+SHA1-Digest: Xi+/8A8igm32domaJp57aYS5Bnw=
+
+Name: assets/StudioConstants.lua
+SHA1-Digest: 5qGpw3veMB0De+JEHHyYwTuLzkg=
+
+Name: lib/armeabi/libcocos2dlua.so
+SHA1-Digest: Dnqvo/FbiaSSWCCCrPcp3TdgwzE=
+
+Name: assets/rtres/shine.png
+SHA1-Digest: NUk37oSaNXDn3LNg9IInvxh8coU=
+
+Name: assets/res/easy_btn.png
+SHA1-Digest: /CIAMVj0j7NO6fneSuHffpagGoQ=
+
+Name: resources.arsc
+SHA1-Digest: dZilZmwKsg5MjqWXGct1rgwH7jA=
+
+Name: assets/mime.lua
+SHA1-Digest: SoletWc9WXn2xXpLc+4MgoKDUfM=
+
+Name: assets/src/Block.lua
+SHA1-Digest: HIx5QxhUeRelF8BIys69IuZxzD0=
+
+Name: assets/res/share_btn.png
+SHA1-Digest: p6FWwj5aoUa0JPLIA/wabizYNoY=
+
+Name: assets/DrawPrimitives.lua
+SHA1-Digest: hfVS9EcCPINtyZSy73RyxTgdYmU=
+
+Name: assets/config.json
+SHA1-Digest: iloerLfaTT+uMZq5T/qFuVHdHlg=
+
+Name: AndroidManifest.xml
+SHA1-Digest: eXRF77X2YSp5ldeidXzgTXJVqRA=
+
+Name: assets/res/block2.png
+SHA1-Digest: gz1ovvicTID/5YMC1z340+WIVuc=
+
+Name: assets/res/title.png
+SHA1-Digest: dyN02zHGnAi1WDlrKP3oYSH/3Uo=
+
+Name: assets/res/ok_btn.png
+SHA1-Digest: HwOYS2EDKKFuHvXptjf6K4dH2ek=
+
+Name: assets/socket.lua
+SHA1-Digest: llhcgjOyIt2sfKaLwDbq4MTiyAI=
+
+Name: assets/mbox.lua
+SHA1-Digest: a7ycON34yqDWPS5CERM3IWM617Q=
+
+Name: assets/res/medium_btn.png
+SHA1-Digest: bTIDY0MBUDHv8pHdASDHkwsGGSM=
+
+Name: assets/res/line.png
+SHA1-Digest: dG+QRQjg4oDYQxXyHRzNhfxBfEY=
+
+Name: assets/tp.lua
+SHA1-Digest: w520BbmT9TGEKPSg/wjOMklylEQ=
+
+Name: assets/res/welcome.jpg
+SHA1-Digest: W+iOROE8/E3fw31BxUTz1q/QjNs=
+
+Name: assets/ftp.lua
+SHA1-Digest: nyCHWOJveK+gjlrae7HJuvUyG10=
+
+Name: assets/headers.lua
+SHA1-Digest: mbS/sbfX6nVSCR0Bvx+qEdU3VcQ=
+
+Name: assets/rtres/Play0.png
+SHA1-Digest: LZ7BORrsSD9Andwx5+/0RzJfJCg=
+
+Name: assets/res/game_bg.jpg
+SHA1-Digest: s885jNdw5Fu6cpb93cz4LmNJnjI=
+
+Name: assets/res/font/BradleyHandITC.TTF
+SHA1-Digest: jut9emF1g1VM45iNxsioVHNP1bM=
+
+Name: classes.dex
+SHA1-Digest: BQuujLIL2f4k7kbXn6JGgFxhKN8=
+
+Name: assets/Deprecated.lua
+SHA1-Digest: HJbaEIhP+l0xk1ZrFM6NweLEPhg=
+
+Name: assets/DeprecatedClass.lua
+SHA1-Digest: CC2/76wdIYQLqZa34ci3FwnUCEA=
+
+Name: assets/Opengl.lua
+SHA1-Digest: ICKgx6JP4bsINsZ1aFtHlC9Y1Po=
+
+Name: assets/res/map_bg.png
+SHA1-Digest: 908nSoLpfAZVGlIE812VqaSIP4A=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: 7l6klLFTCrrzVvKDbxe62zhdRl8=
+
