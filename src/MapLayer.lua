@@ -3,6 +3,7 @@ local MapLayer = class("MapLayerLayer",function() return cc.Layer:create() end)
 local Block = require("src/Block")
 local ws = cc.Director:getInstance():getWinSize()
 local scheduler = cc.Director:getInstance():getScheduler()
+
 function MapLayer:ctor(opt)
     cclog("MapLayer:ctor")
     local opt = opt or {}
@@ -57,12 +58,13 @@ function MapLayer:initBlocks(opt)
                      self._breakLength + blockSize/2
     local startPty = self._bg:getPositionY() - self._bg:getContentSize().height/2 +
                      self._breakLength + blockSize/2
-                         
+    local colorNum = cc.UserDefault:getInstance():getIntegerForKey("color_num",2)
+    print(colorNum)                         
     for i = 1, self._size do
         local y = startPty + (i-1) * blockSize + (i-1) * self._breakLength
         self._blocks[i] = {}
         for j = 1, self._size do
-            local color = math.random(1,2) --随机显示颜色
+            local color = math.random(1, colorNum) --随机显示颜色
             local x = startPtx + (j-1) * blockSize + (j-1) * self._breakLength 
             local block = Block.new(color)
             block:setPosition(x, y)
@@ -186,13 +188,18 @@ end
 
 -- 触摸事件
 function MapLayer:onTouchEnded(touch, event)
+    local isVibration = cc.UserDefault:getInstance():getBoolForKey("vibration",true)
+    local isMusicOn = cc.UserDefault:getInstance():getBoolForKey("music",true)
     local location = self:convertToNodeSpace(touch:getLocation())
     for i = 1, #self._blocks do
         for j = 1, #self._blocks[i] do
             local block = self._blocks[i][j]
             if cc.rectContainsPoint(block:getBoundingBox(),location) then
                 self:touchIn(i,j)
-                vibrate()
+                if isVibration then vibrate() end 
+                if isMusicOn then 
+                    cc.SimpleAudioEngine:getInstance():playEffect("res/effect.wav")
+                end
                 return
             end
         end

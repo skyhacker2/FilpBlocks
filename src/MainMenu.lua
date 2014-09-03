@@ -13,6 +13,7 @@ function MainMenu:ctor()
     self._isSubMenuShown = false
     self:initMenu()
     self:initSubMenu()
+    self:bindSubMenuEvent()
 end
 
 function MainMenu:initMenu()
@@ -53,28 +54,68 @@ function MainMenu:initSubMenu()
     end
     
     local x, y, marginTop = ws.width/2, -100, 100
-    self.vibrationMenu = createMenu("Vibration: On")
+    local isVibration = cc.UserDefault:getInstance():getBoolForKey("vibration",true)
+    print(isVibration)
+    self.vibrationMenu = createMenu("Vibration: "..(isVibration and "On" or "Off"))
     self.vibrationMenu:setPosition(x, y)
     y = y - marginTop
     
-    self.musicMenu = createMenu("Music: On")
+    local isMusicOn = cc.UserDefault:getInstance():getBoolForKey("music",true)
+    self.musicMenu = createMenu("Music: "..(isMusicOn and "On" or "Off"))
     self.musicMenu:setPosition(x, y)
     y = y - marginTop
     
-    self.colorNumMenu = createMenu("Color: 2")
+    local colorNum = cc.UserDefault:getInstance():getIntegerForKey("color_num",2)
+    print(colorNum)
+    self.colorNumMenu = createMenu("Color: " .. (colorNum == 2 and 2 or 3))
     self.colorNumMenu:setPosition(x, y)
     y = y - marginTop
     
     self.rateMenu  = createMenu("Rate App")
     self.rateMenu:setPosition(x, y)
-    
-    
+
     local menu = cc.Menu:create(self.vibrationMenu, self.musicMenu, 
                                 self.colorNumMenu, self.rateMenu)
     menu:setAnchorPoint(0,0)
     menu:setPosition(0,0)
     self:addChild(menu)
+end
+
+function MainMenu:bindSubMenuEvent()
+    -- 设置振动
+    self.vibrationMenu:registerScriptTapHandler(function() 
+        local isVibrationOn = cc.UserDefault:getInstance():getBoolForKey("vibration",true)
+        if isVibrationOn then
+            cc.UserDefault:getInstance():setBoolForKey("vibration",false)
+        	self.vibrationMenu:setString("Vibration: Off")
+        else
+            cc.UserDefault:getInstance():setBoolForKey("vibration",true)
+            self.vibrationMenu:setString("Vibration: On")
+        end
+    end)
     
+    -- 设置音乐
+    self.musicMenu:registerScriptTapHandler(function()
+        local isMusicOn = cc.UserDefault:getInstance():getBoolForKey("music",true)
+        if isMusicOn then
+            cc.UserDefault:getInstance():setBoolForKey("music",false)
+            self.musicMenu:setString("Music: Off")
+        else
+            cc.UserDefault:getInstance():setBoolForKey("music",true)
+            self.musicMenu:setString("Music: On")
+        end
+    end)
+    -- 设置颜色
+    self.colorNumMenu:registerScriptTapHandler(function()
+        local colorNum = cc.UserDefault:getInstance():getIntegerForKey("color_num",2)
+        if colorNum == 2 then
+            cc.UserDefault:getInstance():setIntegerForKey("color_num",3)
+            self.colorNumMenu:setString("Color: 3")
+        else
+            cc.UserDefault:getInstance():setIntegerForKey("color_num",2)
+            self.colorNumMenu:setString("Color: 2")
+        end
+    end)
 end
 
 function MainMenu:toggleSubMenu()

@@ -35,6 +35,8 @@ function GameLayer:init()
 end
 
 function GameLayer:initWelcomeLayer()
+    cc.SimpleAudioEngine:getInstance():playEffect("res/start.wav")
+    
     local welcome = cc.Sprite:create("res/welcome.jpg")
     welcome:setPosition(ws.width/2,ws.height/2)
     self:addChild(welcome)

@@ -2,12 +2,13 @@
 local Block = class("Block", function() return cc.Sprite:create() end)
 
 -- 颜色对应的纹理图片
-local textureStrs = {"res/block1.png", "res/block2.png"}
+local textureStrs = {"res/block1.png", "res/block2.png", "res/block3.png"}
 
 function Block:ctor(color)
     self.color = color or 1
     self:setAnchorPoint(cc.p(0.5,0.5))
     self:setTexture(textureStrs[self.color])
+    self.colorNum = cc.UserDefault:getInstance():getIntegerForKey("color_num",2)
 end
 
 function Block:nextColor()
@@ -16,7 +17,7 @@ end
 
 -- 延迟翻转
 function Block:nextColorDelay(delay)
-    self.color = self.color % #textureStrs + 1
+    self.color = self.color % self.colorNum + 1
     --print(self._color)
     local delay = cc.DelayTime:create(delay)
     local callfunc = cc.CallFunc:create(function() 
