@@ -15,6 +15,7 @@ LOCAL_SRC_FILES := lua/main.cpp \
                    ../../Classes/Vibrator.cpp \
                    ../../Classes/lua_custom_manual.cpp \
                    ../../Classes/AdManager.cpp\
+                   ../../Classes/Utils.cpp\
 
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes

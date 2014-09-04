@@ -51,6 +51,7 @@
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
 		A51E19EE19B1CDA500D0D22E /* AdManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E19EC19B1CDA500D0D22E /* AdManager.cpp */; };
+		A558BB5D19B8B73400EE9A1D /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A558BB5B19B8B73400EE9A1D /* Utils.cpp */; };
 		A5D5845619B030DD008F2AE4 /* lua_custom_manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D5845219B030DD008F2AE4 /* lua_custom_manual.cpp */; };
 		A5D5845719B030DD008F2AE4 /* Vibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D5845419B030DD008F2AE4 /* Vibrator.cpp */; };
 		C033B51C191B337200D06937 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C033B51A191B337200D06937 /* VisibleRect.cpp */; };
@@ -354,6 +355,8 @@
 		A51E19EC19B1CDA500D0D22E /* AdManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdManager.cpp; path = ../Classes/AdManager.cpp; sourceTree = "<group>"; };
 		A51E19ED19B1CDA500D0D22E /* AdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdManager.h; path = ../Classes/AdManager.h; sourceTree = "<group>"; };
 		A52B84C519B1D18E00513B33 /* AppMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppMacro.h; path = ../Classes/AppMacro.h; sourceTree = "<group>"; };
+		A558BB5B19B8B73400EE9A1D /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../Classes/Utils.cpp; sourceTree = "<group>"; };
+		A558BB5C19B8B73400EE9A1D /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../Classes/Utils.h; sourceTree = "<group>"; };
 		A5D5845219B030DD008F2AE4 /* lua_custom_manual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lua_custom_manual.cpp; path = ../Classes/lua_custom_manual.cpp; sourceTree = "<group>"; };
 		A5D5845319B030DD008F2AE4 /* lua_custom_manual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lua_custom_manual.h; path = ../Classes/lua_custom_manual.h; sourceTree = "<group>"; };
 		A5D5845419B030DD008F2AE4 /* Vibrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vibrator.cpp; path = ../Classes/Vibrator.cpp; sourceTree = "<group>"; };
@@ -639,6 +642,8 @@
 		F293BB7C15EB830F00256477 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A558BB5B19B8B73400EE9A1D /* Utils.cpp */,
+				A558BB5C19B8B73400EE9A1D /* Utils.h */,
 				A52B84C519B1D18E00513B33 /* AppMacro.h */,
 				A51E19EC19B1CDA500D0D22E /* AdManager.cpp */,
 				A51E19ED19B1CDA500D0D22E /* AdManager.h */,
@@ -976,6 +981,7 @@
 				A5D5845719B030DD008F2AE4 /* Vibrator.cpp in Sources */,
 				C033B51C191B337200D06937 /* VisibleRect.cpp in Sources */,
 				C0619CD71896894800872C26 /* Runtime_ios-mac.mm in Sources */,
+				A558BB5D19B8B73400EE9A1D /* Utils.cpp in Sources */,
 				C07828FD18B4DC6F00BD2287 /* Runtime.cpp in Sources */,
 				5023811817EBBCAC00990C9B /* AppController.mm in Sources */,
 				A51E19EE19B1CDA500D0D22E /* AdManager.cpp in Sources */,

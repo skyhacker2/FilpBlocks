@@ -18,6 +18,8 @@ extern "C" {
 
 #include "Vibrator.h"
 #include "AdManager.h"
+#include "AppMacro.h"
+#include "Utils.h"
 
 /** 显示广告
  */
@@ -55,6 +57,19 @@ static int lua_vibrator_vibrate(lua_State* L)
     
     return 0;
 }
+
+/** 
+ * 给App评分
+ */
+static int lua_rate_app(lua_State* L)
+{
+    if (nullptr == L)
+        return 0;
+    CCLOG("lua_rate_app");
+    Utils::rateApp();
+    return 0;
+}
+
 /**
  * 关闭游戏
  */
@@ -81,6 +96,7 @@ int register_all_custom_manual(lua_State* L)
     tolua_function(L, "closeGame", lua_close_game);
     tolua_function(L, "showAds", lua_adManager_showAds);
 	tolua_function(L, "hideAds", lua_adManager_hideAds);
+    tolua_function(L, "rateApp", lua_rate_app);
 	tolua_endmodule(L);
 	return 0;
 }

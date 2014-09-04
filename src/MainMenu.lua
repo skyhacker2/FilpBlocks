@@ -116,6 +116,11 @@ function MainMenu:bindSubMenuEvent()
             self.colorNumMenu:setString("Color: 2")
         end
     end)
+    
+    -- 给我们评分
+    self.rateMenu:registerScriptTapHandler(function()
+        rateApp() 
+    end)
 end
 
 function MainMenu:toggleSubMenu()

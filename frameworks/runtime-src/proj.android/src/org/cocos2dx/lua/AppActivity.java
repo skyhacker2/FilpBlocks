@@ -34,12 +34,14 @@ import net.youmi.android.spot.SpotManager;
 import org.cocos2dx.lib.Cocos2dxActivity;
 
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -69,10 +71,14 @@ public class AppActivity extends Cocos2dxActivity{
 	
 	static boolean mShownAds = false;
 	
+	static Cocos2dxActivity mContext;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		
+		mContext = this;
 		
 		if(nativeIsLandScape()) {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
@@ -198,6 +204,16 @@ public class AppActivity extends Cocos2dxActivity{
 			}
 		});
 		
+	}
+	// 评分
+	public static void rateApp() {
+		Uri uri = Uri.parse("market://details?id=" + mContext.getPackageName());
+		Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+		try {
+		  mContext.startActivity(goToMarket);
+		} catch (ActivityNotFoundException e) {
+		  mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + mContext.getPackageName())));
+		}
 	}
 	@Override
 	protected void onDestroy() {
