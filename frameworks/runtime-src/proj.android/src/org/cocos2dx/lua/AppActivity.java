@@ -26,6 +26,12 @@ THE SOFTWARE.
 ****************************************************************************/
 package org.cocos2dx.lua;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import net.youmi.android.AdManager;
 import net.youmi.android.banner.AdSize;
 import net.youmi.android.banner.AdView;
@@ -39,6 +45,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
+import android.graphics.Rect;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -51,6 +59,8 @@ import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
+import android.view.View.MeasureSpec;
 import android.widget.FrameLayout;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
@@ -215,6 +225,54 @@ public class AppActivity extends Cocos2dxActivity{
 		  mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + mContext.getPackageName())));
 		}
 	}
+	/**
+	 * 截图分享
+	 */
+	public static void share() {
+		mHandler.postDelayed(new Runnable() {
+			
+			@Override
+			public void run() {
+				String path = "/mnt/sdcard/FlipBlocks/";
+				String imagePath = path + "screenshot.png";
+				String internalPath = mContext.getFilesDir().getPath();
+				File tmpFile = new File(internalPath + "/screenshot.png");
+				Log.d(TAG, "internalPath: " + internalPath);
+				File dir = new File(path);
+				if (!dir.exists()) {
+					dir.mkdir();
+				}
+				File imageFile = new File(imagePath);
+				if (imageFile.exists()) {
+					imageFile.delete();
+				}
+				try {
+					imageFile.createNewFile();
+					FileInputStream is = new FileInputStream(tmpFile);
+					FileOutputStream os = new FileOutputStream(imageFile);
+					byte[] buffer = new byte[1024];
+					int count = 0;
+					while((count = is.read(buffer)) != -1) {
+						os.write(buffer);
+						os.flush();
+					}
+					os.close();
+					is.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				tmpFile.delete();
+				Intent shareIntent = new Intent(Intent.ACTION_SEND);
+				shareIntent.setType("image/*");
+				Uri uri = Uri.fromFile(imageFile);
+				shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
+				mContext.startActivity(shareIntent);
+			}
+		}, 1000);
+
+	}
+	
 	@Override
 	protected void onDestroy() {
 		SpotManager.getInstance(this).unregisterSceenReceiver();

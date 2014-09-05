@@ -17,3 +17,13 @@ function G.formatTime(second)
     end
     return mm ..":"..ss
 end
+function G.takeScreenshot()
+    local size = cc.Director:getInstance():getVisibleSize()
+    local texture = cc.RenderTexture:create(size.width, size.height)
+    texture:setPosition(size.width / 2, size.height / 2)
+    texture:begin()
+    cc.Director:getInstance():getRunningScene():visit()
+    texture:endToLua()
+    texture:saveToFile("screenshot.png", cc.IMAGE_FORMAT_PNG)
+    print("saved")
+end

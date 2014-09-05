@@ -16,6 +16,8 @@ public:
     
     static void rateApp();
     
+    static void takeScreenshot();
+    
 };
 
 #endif /* defined(__FlipBlocks__Utils__) */

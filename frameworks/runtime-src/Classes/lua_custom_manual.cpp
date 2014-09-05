@@ -71,6 +71,18 @@ static int lua_rate_app(lua_State* L)
 }
 
 /**
+ * 屏幕截图
+ */
+static int lua_take_screenshot(lua_State* L)
+{
+    if (nullptr == L)
+        return 0;
+    CCLOG("lua_take_screenshot");
+    Utils::takeScreenshot();
+    return 0;
+}
+
+/**
  * 关闭游戏
  */
 static int lua_close_game(lua_State* L)
@@ -97,6 +109,7 @@ int register_all_custom_manual(lua_State* L)
     tolua_function(L, "showAds", lua_adManager_showAds);
 	tolua_function(L, "hideAds", lua_adManager_hideAds);
     tolua_function(L, "rateApp", lua_rate_app);
+    tolua_function(L, "share", lua_take_screenshot);
 	tolua_endmodule(L);
 	return 0;
 }

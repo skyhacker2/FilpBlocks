@@ -144,6 +144,12 @@ function MapLayer:win()
         local shareBtn = ccui.Button:create("res/share_btn.png")
         shareBtn:setPosition(ws.width/3*2,450)
         self:addChild(shareBtn)
+        shareBtn:addTouchEventListener(function(sender, event)
+            if event == ccui.TouchEventType.ended then
+                G.takeScreenshot()
+                share()
+            end 
+        end)
         scheduler:unscheduleScriptEntry(scheduleId)
     end
     scheduleId = scheduler:scheduleScriptFunc(createWinLayer,0.4,false)
