@@ -1,0 +1,131 @@
+obj/local/armeabi/objs-debug/cocos2dx_static/base/s3tc.o: \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/s3tc.cpp \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/s3tc.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCStdC.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCPlatformConfig.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCPlatformMacros.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccConfig.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCPlatformDefine.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/log.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/math.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/api-level.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/types.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/stdint.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/_types.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/machine/_types.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/posix_types.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/stddef.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/compiler.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm/posix_types.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm/types.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/types.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/machine/kernel.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/limits.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/limits.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/limits.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/machine/internal_types.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/machine/limits.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/syslimits.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm/page.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/string.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/malloc.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/stdio.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/stdlib.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/alloca.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/strings.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/memory.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/time.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/time.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/time.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm/siginfo.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm-generic/siginfo.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/s3tc.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCStdC.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCPlatformConfig.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCPlatformMacros.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccConfig.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCPlatformDefine.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/log.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/math.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/api-level.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/types.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/stdint.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/_types.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/machine/_types.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/posix_types.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/stddef.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/compiler.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm/posix_types.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm/types.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/types.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/machine/kernel.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/limits.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/limits.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/limits.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/machine/internal_types.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/machine/limits.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/syslimits.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm/page.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/string.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/malloc.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/stdio.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/stdlib.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/alloca.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/strings.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/memory.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/time.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/time.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/linux/time.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm/siginfo.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/asm-generic/siginfo.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:

@@ -1,0 +1,38 @@
+obj/local/armeabi/objs-debug/cocos2dxandroid_static/jni/DPIJni.o: \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/jni/DPIJni.cpp \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/jni/DPIJni.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/jni/JniHelper.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/jni.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/api-level.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/../../base/CCPlatformMacros.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/../../base/ccConfig.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/../../base/CCPlatformConfig.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/CCPlatformDefine.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/log.h
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/jni/DPIJni.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/jni/JniHelper.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/jni.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/cdefs.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/api-level.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/../../base/CCPlatformMacros.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/../../base/ccConfig.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/../../base/CCPlatformConfig.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//platform/android/CCPlatformDefine.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/log.h:

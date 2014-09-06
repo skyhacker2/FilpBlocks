@@ -1,0 +1,266 @@
+obj/local/armeabi/objs-debug/cocos2dx_static/2d/CCFontCharMap.o: \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCFontCharMap.cpp \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCFontCharMap.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCFont.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCLabel.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCSpriteBatchNode.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCNode.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccMacros.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCConsole.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/select.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCPlatformMacros.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccConfig.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCPlatformConfig.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCPlatformDefine.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/log.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCStdC.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/math.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/stdlib.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/alloca.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/strings.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/memory.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEventDispatcher.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEventListener.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCRef.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEvent.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCVector.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCScriptSupport.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/CCCommon.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCTouch.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/CCGeometry.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/CCMath.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec2.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/CCMathBase.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec2.inl \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec2.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec3.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec3.inl \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec3.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Mat4.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec4.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec4.inl \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Mat4.inl \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec4.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Mat4.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Quaternion.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Quaternion.inl \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEventTouch.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEventKeyboard.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCProtocols.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccTypes.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCGL.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCTexture2D.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/CCAffineTransform.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/ccGLStateCache.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCTextureAtlas.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCBatchCommand.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCRenderCommand.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCGLProgram.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCRenderCommandPool.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCCustomCommand.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCRenderCommandPool.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCFontAtlas.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/CCFileUtils.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCValue.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCData.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccUTF8.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCDirector.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCLabelAtlas.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCAtlasNode.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCQuadCommand.h \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCGLProgramState.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCTextureCache.h \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable \
+ /Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue \
+ /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/CCImage.h
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCFontCharMap.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCFont.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/string:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCLabel.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCSpriteBatchNode.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/vector:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCNode.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccMacros.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCConsole.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/sys/select.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/map:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCPlatformMacros.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccConfig.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCPlatformConfig.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCPlatformDefine.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/android/log.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCStdC.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/math.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/stdlib.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/alloca.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/strings.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/memory.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEventDispatcher.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEventListener.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCRef.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/set:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEvent.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/list:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCVector.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/algorithm:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCScriptSupport.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/CCCommon.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCTouch.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/CCGeometry.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/CCMath.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec2.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/CCMathBase.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec2.inl:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec2.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec3.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec3.inl:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec3.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Mat4.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec4.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec4.inl:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Mat4.inl:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Vec4.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Mat4.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Quaternion.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/Quaternion.inl:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEventTouch.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCEventKeyboard.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCProtocols.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccTypes.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/android/CCGL.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
+
+/Users/eleven/Documents/android-ndk-r9b/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCTexture2D.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./math/CCAffineTransform.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/ccGLStateCache.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCTextureAtlas.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCBatchCommand.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCRenderCommand.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCGLProgram.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCRenderCommandPool.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCCustomCommand.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCRenderCommandPool.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCFontAtlas.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/CCFileUtils.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCValue.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCData.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/ccUTF8.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./base/CCDirector.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCLabelAtlas.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./2d/CCAtlasNode.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCQuadCommand.h:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCGLProgramState.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/stack:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./renderer/CCTextureCache.h:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/condition_variable:
+
+/Users/eleven/Documents/android-ndk-r9b/sources/cxx-stl/gnu-libstdc++/4.8/include/queue:
+
+/Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/frameworks/runtime-src/proj.android/../../cocos2d-x/cocos//./platform/CCImage.h:

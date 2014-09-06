@@ -48,7 +48,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     }
 
     // turn on display FPS
-    director->setDisplayStats(true);
+    director->setDisplayStats(false);
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
@@ -61,6 +61,14 @@ bool AppDelegate::applicationDidFinishLaunching()
     //register_custom_function(stack->getLuaState());
     LuaStack* stack = engine->getLuaStack();
     register_all_custom_manual(stack->getLuaState());
+    
+    auto backListener = EventListenerKeyboard::create();
+    backListener->onKeyReleased = [=](EventKeyboard::KeyCode code, Event* event) {
+        if (code == EventKeyboard::KeyCode::KEY_BACKSPACE) {
+            director->end();
+        }
+    };
+    director->getEventDispatcher()->addEventListenerWithFixedPriority(backListener, -1000);
 
 #if (COCOS2D_DEBUG>0)
     if (startRuntime())

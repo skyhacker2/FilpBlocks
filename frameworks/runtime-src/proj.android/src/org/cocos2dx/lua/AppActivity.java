@@ -165,7 +165,7 @@ public class AppActivity extends Cocos2dxActivity{
 	}
 	public void appInit() {
 		AdManager.getInstance(this).init("be175c01d4075b98", "e1cd44cbf9e5e7a3", false);
-		
+		AdManager.getInstance(this).setUserDataCollect(true);
 		// 广告条
 		mAdViewLayoutParams = new FrameLayout.LayoutParams(
 				FrameLayout.LayoutParams.WRAP_CONTENT,
@@ -217,13 +217,20 @@ public class AppActivity extends Cocos2dxActivity{
 	}
 	// 评分
 	public static void rateApp() {
-		Uri uri = Uri.parse("market://details?id=" + mContext.getPackageName());
-		Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-		try {
-		  mContext.startActivity(goToMarket);
-		} catch (ActivityNotFoundException e) {
-		  mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + mContext.getPackageName())));
-		}
+		mHandler.post(new Runnable() {
+			
+			@Override
+			public void run() {
+				Uri uri = Uri.parse("market://details?id=" + mContext.getPackageName());
+				Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+				try {
+				  mContext.startActivity(goToMarket);
+				} catch (ActivityNotFoundException e) {
+				  mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + mContext.getPackageName())));
+				}
+			}
+		});
+
 	}
 	/**
 	 * 截图分享

@@ -26,12 +26,29 @@ function GameLayer:init()
     self._title = cc.Sprite:create("res/title.png")
     self._title:setPosition(ws.width/2,ws.height/1.15)
     self:addChild(self._title)
+    
+    self.tips = cc.Label:createWithTTF("All blocks have the same color, you win",
+        "res/font/BradleyHandITC.TTF", 30)
+    self.tips:setPosition(ws.width/2,920)
+    self:addChild(self.tips) 
+    
     -- 显示广告
     local entry = nil
     entry = scheduler:scheduleScriptFunc(function()
         showAds()
         scheduler:unscheduleScriptEntry(entry)
     end,1,false)
+    
+    -- 返回键
+    local backListener = cc.EventListenerKeyboard:create()
+    backListener:registerScriptHandler(function(keyCode, event)
+        -- 小米的的返回键是6 = =！
+        if keyCode == cc.KeyCode.KEY_BACKSPACE or keyCode == 6 then
+            cc.Director:getInstance():endToLua()
+        end
+    end,cc.Handler.EVENT_KEYBOARD_RELEASED)
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(backListener, self)
 end
 
 function GameLayer:initWelcomeLayer()

@@ -40,6 +40,8 @@ function MapLayer:init(opt)
     -- 重新开始按钮
     self.restartMenu = cc.MenuItemImage:create("res/restart_btn.png","res/restart_btn.png")
     
+                          
+    
     local menu = cc.Menu:create(self.restartMenu)
     menu:setPosition(ws.width/1.2,ws.height/1.23)
     self:addChild(menu)
