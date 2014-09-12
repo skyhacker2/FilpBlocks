@@ -16,7 +16,7 @@ public:
     
     static void rateApp();
     
-    static void takeScreenshot();
+    static void share(std::string text);
     
 };
 

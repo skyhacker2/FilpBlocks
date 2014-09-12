@@ -235,7 +235,8 @@ public class AppActivity extends Cocos2dxActivity{
 	/**
 	 * 截图分享
 	 */
-	public static void share() {
+	public static void share(final String text) {
+		Log.d(TAG, "text: " + text);
 		mHandler.postDelayed(new Runnable() {
 			
 			@Override
@@ -274,6 +275,9 @@ public class AppActivity extends Cocos2dxActivity{
 				shareIntent.setType("image/*");
 				Uri uri = Uri.fromFile(imageFile);
 				shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
+				if (text != null) {
+					shareIntent.putExtra(Intent.EXTRA_TEXT, text);
+				}
 				mContext.startActivity(shareIntent);
 			}
 		}, 1000);

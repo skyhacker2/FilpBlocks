@@ -28,27 +28,15 @@ void Utils::rateApp()
     }
     CCLOG("jni-java 执行完毕");
 }
-void Utils::takeScreenshot()
+void Utils::share(std::string text)
 {
-	/*
-    Size size = Director::getInstance()->getWinSize();
-    RenderTexture* texture = RenderTexture::create((int)size.width, (int)size.height);
-    texture->setPosition(Point(size.width, size.height));
-    texture->begin();
-    Director::getInstance()->getRunningScene()->visit();
-    texture->end();
-    if (texture->saveToFile("screenshot.png", kCCImageFormatPNG)){
-        CCLOG("screen captured");
-    }
-    CC_SAFE_DELETE(texture);
-    */
     JniMethodInfo minfo;	// 定义Jni函数信息结构体
     // 无参数
-    bool isHave = JniHelper::getStaticMethodInfo(minfo, CLASS_NAME, "share", "()V");
+    bool isHave = JniHelper::getStaticMethodInfo(minfo, CLASS_NAME, "share", "(Ljava/lang/String;)V");
     if (!isHave) {
         CCLOG("jni: share 不存在");
     } else {
-        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID);
+        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID, minfo.env->NewStringUTF(text.c_str()));
     }
     CCLOG("jni-java 执行完毕");
 }
@@ -57,7 +45,7 @@ void Utils::rateApp()
 {
     
 }
-void Utils::takeScreenshot()
+void Utils::share(std::string text)
 {
     
 }

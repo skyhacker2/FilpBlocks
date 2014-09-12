@@ -71,14 +71,26 @@ static int lua_rate_app(lua_State* L)
 }
 
 /**
- * 屏幕截图
+ * 分享截图
  */
-static int lua_take_screenshot(lua_State* L)
+static int lua_share(lua_State* L)
 {
     if (nullptr == L)
         return 0;
-    CCLOG("lua_take_screenshot");
-    Utils::takeScreenshot();
+    CCLOG("lua_share");
+    int argc = lua_gettop(L);
+    if (1 == argc)
+    {
+        if (!lua_isstring(L, 1))
+		{
+            CCLOG("Error: 参数需要字符串");
+            return 0;
+        }
+        const char* text = lua_tostring(L, 1);
+        CCLOG("text: %s", text);
+        Utils::share(text);
+    }
+    
     return 0;
 }
 
@@ -109,7 +121,7 @@ int register_all_custom_manual(lua_State* L)
     tolua_function(L, "showAds", lua_adManager_showAds);
 	tolua_function(L, "hideAds", lua_adManager_hideAds);
     tolua_function(L, "rateApp", lua_rate_app);
-    tolua_function(L, "share", lua_take_screenshot);
+    tolua_function(L, "share", lua_share);
 	tolua_endmodule(L);
 	return 0;
 }
