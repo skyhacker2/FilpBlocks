@@ -21,7 +21,7 @@ function GameLayer:init()
     local bg = cc.Sprite:create("res/game_bg.jpg")
     bg:setPosition(ws.width/2, ws.height/2)
     self:addChild(bg, 0)
-    self._flipLayer = require("src/FlipLayer").new()
+    self._flipLayer = require("FlipLayer").new()
     self:addChild(self._flipLayer)
     self._title = cc.Sprite:create("res/title.png")
     self._title:setPosition(ws.width/2,ws.height/1.15)
@@ -33,11 +33,11 @@ function GameLayer:init()
     self:addChild(self.tips) 
     
     -- 显示广告
-    local entry = nil
-    entry = scheduler:scheduleScriptFunc(function()
-        showAds()
-        scheduler:unscheduleScriptEntry(entry)
-    end,1,false)
+--    local entry = nil
+--    entry = scheduler:scheduleScriptFunc(function()
+--        showAds()
+--        scheduler:unscheduleScriptEntry(entry)
+--    end,1,false)
     
     -- 返回键
     local backListener = cc.EventListenerKeyboard:create()

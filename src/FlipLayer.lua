@@ -1,8 +1,8 @@
 -- 翻转效果Layer
 local FlipLayer = class("FlipLayer", function() return cc.Layer:create() end)
 
-local MenuLayer = require("src/MainMenu")
-local MapLayer = require("src/MapLayer")
+local MenuLayer = require("MainMenu")
+local MapLayer = require("MapLayer")
 
 function FlipLayer:ctor()
     self._menuLayer = MenuLayer.new()

@@ -28,15 +28,24 @@ package org.cocos2dx.lua;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Random;
 
 import net.youmi.android.AdManager;
 import net.youmi.android.banner.AdSize;
 import net.youmi.android.banner.AdView;
+import net.youmi.android.dev.OnlineConfigCallBack;
 import net.youmi.android.spot.SpotManager;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 import org.cocos2dx.lib.Cocos2dxActivity;
 
 import android.app.AlertDialog;
@@ -45,8 +54,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Bitmap;
-import android.graphics.Rect;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -55,12 +62,12 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.View;
-import android.view.View.MeasureSpec;
 import android.widget.FrameLayout;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
@@ -80,6 +87,7 @@ public class AppActivity extends Cocos2dxActivity{
 	static Handler mHandler;
 	
 	static boolean mShownAds = false;
+	static boolean mCanShowAd = true;
 	
 	static Cocos2dxActivity mContext;
 	
@@ -180,20 +188,47 @@ public class AppActivity extends Cocos2dxActivity{
 		mCopyFrameLayout = mFrameLayout;
 		//showAds();
 		mHandler = new Handler(this.getMainLooper());
+		//getOnlineConfig();
+//		AdManager.getInstance(this).asyncGetOnlineConfig("ShowAD", new OnlineConfigCallBack() {
+//		    @Override
+//		    public void onGetOnlineConfigSuccessful(String key, String value) {
+//		        // 获取在线参数成功
+//		    	Log.d(TAG, "在线参数: " + key + ": " + value);
+//		    	if (value == "true") {
+//		    		mCanShowAd = true;
+//		    		if (!mShownAds) {
+//		    			showAds();
+//		    		}
+//		    	} else if (value == "false") {
+//		    		mCanShowAd = false;
+//		    		hideAds();
+//		    	}
+//		    }
+//
+//		    @Override
+//		    public void onGetOnlineConfigFailed(String key) {
+//		        // 获取在线参数失败，可能原因有：键值未设置或为空、网络异常、服务器异常
+//		    	Log.d(TAG, "获取在线参数失败");
+//		    }
+//		});
 	}
 	
 	// jni 显示广告
 	public static void showAds() {
-		Log.d(TAG, "显示广告");
+		if (!mCanShowAd) {
+			return;
+		}
 		if (mShownAds) {
 			return;
 		}
+		Log.d(TAG, "显示广告");
 		mShownAds = true;
 		mHandler.post(new Runnable() {
 			
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
+				Log.d(TAG, "添加广告条");
 				mCopyFrameLayout.addView(mAdView, mAdViewLayoutParams);
 			}
 		});
@@ -289,4 +324,72 @@ public class AppActivity extends Cocos2dxActivity{
 		SpotManager.getInstance(this).unregisterSceenReceiver();
 		super.onDestroy();
 	}
+	
+	
+	private Handler mHttpHandler = new Handler() {
+
+		@Override
+		public void handleMessage(Message msg) {
+			Log.d(TAG, "msg = " + msg);
+			if (msg.what == 1) {
+				mCanShowAd = true;
+				this.postDelayed(new Runnable() {
+					
+					@Override
+					public void run() {
+						showAds();
+					}
+				}, 2000);
+				
+			} else {
+				mCanShowAd = false;
+				this.postDelayed(new Runnable() {
+					
+					@Override
+					public void run() {
+						hideAds();
+					}
+				}, 2000);
+			}
+		}
+		
+	};
+	
+	void getOnlineConfig() {
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				Looper.prepare();
+				HttpGet request = new HttpGet("https://raw.githubusercontent.com/skyhacker2/FilpBlocks/master/ad.txt");
+				request.setHeader("Cache-Control", "no-cache"); 
+				HttpClient client = new DefaultHttpClient();
+				try {
+					HttpResponse response = client.execute(request);
+					if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+						HttpEntity entity = response.getEntity();
+						String content = new String(EntityUtils.toString(entity));
+						Log.d(TAG, "配置内容: " + content);
+						if (content.equals("true")){
+							mHttpHandler.sendEmptyMessage(1);
+						} else {
+							mHttpHandler.sendEmptyMessage(0);
+						}
+					}
+				} catch (ClientProtocolException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}).start();
+	}
+	@Override
+	protected void onResume() {
+		super.onResume();
+		getOnlineConfig();
+	}
+	
 }

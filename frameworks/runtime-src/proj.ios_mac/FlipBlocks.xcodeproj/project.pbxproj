@@ -51,6 +51,7 @@
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
 		A51E19EE19B1CDA500D0D22E /* AdManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E19EC19B1CDA500D0D22E /* AdManager.cpp */; };
+		A5355F3819F17647005C3290 /* bytecode in Resources */ = {isa = PBXBuildFile; fileRef = A5355F3719F17647005C3290 /* bytecode */; };
 		A558BB5D19B8B73400EE9A1D /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A558BB5B19B8B73400EE9A1D /* Utils.cpp */; };
 		A5D5845619B030DD008F2AE4 /* lua_custom_manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D5845219B030DD008F2AE4 /* lua_custom_manual.cpp */; };
 		A5D5845719B030DD008F2AE4 /* Vibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D5845419B030DD008F2AE4 /* Vibrator.cpp */; };
@@ -58,8 +59,6 @@
 		C033B51D191B337200D06937 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C033B51A191B337200D06937 /* VisibleRect.cpp */; };
 		C03781B918BF655400FE4F13 /* res in Resources */ = {isa = PBXBuildFile; fileRef = C03781B718BF655400FE4F13 /* res */; };
 		C03781BA18BF655400FE4F13 /* res in Resources */ = {isa = PBXBuildFile; fileRef = C03781B718BF655400FE4F13 /* res */; };
-		C03781BB18BF655400FE4F13 /* src in Resources */ = {isa = PBXBuildFile; fileRef = C03781B818BF655400FE4F13 /* src */; };
-		C03781BC18BF655400FE4F13 /* src in Resources */ = {isa = PBXBuildFile; fileRef = C03781B818BF655400FE4F13 /* src */; };
 		C03781CF18BF656A00FE4F13 /* AudioEngine.lua in Resources */ = {isa = PBXBuildFile; fileRef = C03781BD18BF656900FE4F13 /* AudioEngine.lua */; };
 		C03781D018BF656A00FE4F13 /* AudioEngine.lua in Resources */ = {isa = PBXBuildFile; fileRef = C03781BD18BF656900FE4F13 /* AudioEngine.lua */; };
 		C03781D118BF656A00FE4F13 /* CCBReaderLoad.lua in Resources */ = {isa = PBXBuildFile; fileRef = C03781BE18BF656900FE4F13 /* CCBReaderLoad.lua */; };
@@ -355,6 +354,7 @@
 		A51E19EC19B1CDA500D0D22E /* AdManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdManager.cpp; path = ../Classes/AdManager.cpp; sourceTree = "<group>"; };
 		A51E19ED19B1CDA500D0D22E /* AdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdManager.h; path = ../Classes/AdManager.h; sourceTree = "<group>"; };
 		A52B84C519B1D18E00513B33 /* AppMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppMacro.h; path = ../Classes/AppMacro.h; sourceTree = "<group>"; };
+		A5355F3719F17647005C3290 /* bytecode */ = {isa = PBXFileReference; lastKnownFileType = folder; name = bytecode; path = ../../../bytecode; sourceTree = "<group>"; };
 		A558BB5B19B8B73400EE9A1D /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../Classes/Utils.cpp; sourceTree = "<group>"; };
 		A558BB5C19B8B73400EE9A1D /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../Classes/Utils.h; sourceTree = "<group>"; };
 		A5D5845219B030DD008F2AE4 /* lua_custom_manual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lua_custom_manual.cpp; path = ../Classes/lua_custom_manual.cpp; sourceTree = "<group>"; };
@@ -365,7 +365,6 @@
 		C033B51B191B337200D06937 /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VisibleRect.h; path = ../Classes/VisibleRect.h; sourceTree = "<group>"; };
 		C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_lua_bindings.xcodeproj; path = "../../cocos2d-x/cocos/scripting/lua-bindings/proj.ios_mac/cocos2d_lua_bindings.xcodeproj"; sourceTree = "<group>"; };
 		C03781B718BF655400FE4F13 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; name = res; path = ../../../res; sourceTree = "<group>"; };
-		C03781B818BF655400FE4F13 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = ../../../src; sourceTree = "<group>"; };
 		C03781BD18BF656900FE4F13 /* AudioEngine.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AudioEngine.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/AudioEngine.lua"; sourceTree = "<group>"; };
 		C03781BE18BF656900FE4F13 /* CCBReaderLoad.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CCBReaderLoad.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/CCBReaderLoad.lua"; sourceTree = "<group>"; };
 		C03781BF18BF656900FE4F13 /* Cocos2d.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cocos2d.lua; path = "../../cocos2d-x/cocos/scripting/lua-bindings/script/Cocos2d.lua"; sourceTree = "<group>"; };
@@ -667,10 +666,10 @@
 		F293BC4615EB859D00256477 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5355F3719F17647005C3290 /* bytecode */,
 				C0F9D4BB192F3E6A0066134A /* rtres */,
 				C05D1C111923449100B808A4 /* config.json */,
 				C03781B718BF655400FE4F13 /* res */,
-				C03781B818BF655400FE4F13 /* src */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -866,7 +865,6 @@
 				C03781D418BF656A00FE4F13 /* Cocos2d.lua in Resources */,
 				C03781BA18BF655400FE4F13 /* res in Resources */,
 				C09BA7E718BC929700A85A3E /* WorkSpaceDialog.xib in Resources */,
-				C03781BC18BF655400FE4F13 /* src in Resources */,
 				C08D5D6918E567C6009071A4 /* url.lua in Resources */,
 				C03781E218BF656A00FE4F13 /* DrawPrimitives.lua in Resources */,
 				C08D5D6318E567C6009071A4 /* smtp.lua in Resources */,
@@ -919,6 +917,7 @@
 				5091733917ECE17A00D62437 /* Icon-58.png in Resources */,
 				C03781ED18BF656A00FE4F13 /* Opengl.lua in Resources */,
 				C03781F118BF656A00FE4F13 /* StudioConstants.lua in Resources */,
+				A5355F3819F17647005C3290 /* bytecode in Resources */,
 				5023811F17EBBCAC00990C9B /* Icon-152.png in Resources */,
 				C03781D118BF656A00FE4F13 /* CCBReaderLoad.lua in Resources */,
 				C0F9D4BC192F3E6A0066134A /* rtres in Resources */,
@@ -936,7 +935,6 @@
 				5023811A17EBBCAC00990C9B /* Default.png in Resources */,
 				C03781E118BF656A00FE4F13 /* DrawPrimitives.lua in Resources */,
 				C08D5D6218E567C6009071A4 /* smtp.lua in Resources */,
-				C03781BB18BF655400FE4F13 /* src in Resources */,
 				C03781EB18BF656A00FE4F13 /* luaoc.lua in Resources */,
 				5091733817ECE17A00D62437 /* Icon-50.png in Resources */,
 				C03781D718BF656A00FE4F13 /* CocoStudio.lua in Resources */,

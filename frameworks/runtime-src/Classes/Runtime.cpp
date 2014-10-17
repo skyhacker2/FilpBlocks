@@ -70,6 +70,7 @@ void startScript(string strDebugArg)
         engine->executeString(strDebugArg.c_str());
     }
     cocos2d::log("debug args = %s",strDebugArg.c_str());
+    CCLOG("Entry: %s", ConfigParser::getInstance()->getEntryFile().c_str());
     engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
 }
 

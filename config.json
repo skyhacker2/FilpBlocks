@@ -4,7 +4,7 @@
     "name": "FlipBlocks",
     "width": 640,
     "height": 1136,
-    "entry": "src/main.lua",
+    "entry": "bytecode/main.lua",
     "consolePort": 6010,
     "debugPort": 10000,
     "forwardConsolePort": 10089,

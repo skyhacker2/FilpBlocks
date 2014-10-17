@@ -1,6 +1,6 @@
 -- 地图
 local MapLayer = class("MapLayerLayer",function() return cc.Layer:create() end)
-local Block = require("src/Block")
+local Block = require("Block")
 local ws = cc.Director:getInstance():getWinSize()
 local scheduler = cc.Director:getInstance():getScheduler()
 

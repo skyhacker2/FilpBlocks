@@ -74,7 +74,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     if (startRuntime())
         return true;
 #endif
-
+    
+    CCLOG("%s",ConfigParser::getInstance()->getEntryFile().c_str());
     engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());
     return true;
 }
@@ -93,5 +94,16 @@ void AppDelegate::applicationWillEnterForeground()
     Director::getInstance()->startAnimation();
 
     SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+}
+// Xcode 6
+extern "C"{
+    size_t fwrite$UNIX2003( const void *a, size_t b, size_t c, FILE *d )
+    {
+        return fwrite(a, b, c, d);
+    }
+    char* strerror$UNIX2003( int errnum )
+    {
+        return strerror(errnum);
+    }
 }
 

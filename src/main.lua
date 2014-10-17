@@ -27,7 +27,8 @@ local function main()
     collectgarbage("setpause", 100)
     collectgarbage("setstepmul", 5000)
     cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(640, 1136, 0)
-	cc.FileUtils:getInstance():addSearchResolutionsOrder("src");
+    cc.FileUtils:getInstance():addSearchResolutionsOrder("src");
+    cc.FileUtils:getInstance():addSearchResolutionsOrder("bytecode");
 	cc.FileUtils:getInstance():addSearchResolutionsOrder("res");
     --support debug
     local targetPlatform = cc.Application:getInstance():getTargetPlatform()
@@ -40,12 +41,12 @@ local function main()
     end
     
     -- run
-    require("src/G")
+    require("G")
 	
 	if cc.Director:getInstance():getRunningScene() then
-		cc.Director:getInstance():replaceScene(require("src/GameLayer").scene())
+		cc.Director:getInstance():replaceScene(require("GameLayer").scene())
 	else
-		cc.Director:getInstance():runWithScene(require("src/GameLayer").scene())
+		cc.Director:getInstance():runWithScene(require("GameLayer").scene())
 	end
 
 end

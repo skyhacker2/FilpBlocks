@@ -95,7 +95,7 @@ ConfigParser::ConfigParser(void):_isInit(false),_isLandscape(true)
 {
     _initViewSize.setSize(960,640);
     _viewName = "FlipBlocks";
-    _entryfile = "src/main.lua";
+    _entryfile = "src/main2.lua";
 }
 
 rapidjson::Document& ConfigParser::getConfigJsonRoot()
