@@ -1,0 +1,68 @@
+package org.cocos2dx.lua;
+
+import android.view.Gravity;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.FrameLayout;
+
+import com.wandoujia.ads.sdk.Ads;
+import com.wandoujia.ads.sdk.widget.AdBanner;
+
+public class AdManager {
+	private AppActivity mContext;
+	private FrameLayout mLayout;
+	
+	private String ADS_APP_ID = "100012493";
+	private String ADS_SECRET_KEY = "223d23f882ab5aaec8b195d466380ee3";
+	private String BANNER_ID = "3af78303f7473cc59a31b9a9dfadfd2f";
+	private String WALL_ID = "0305179656226ea8b0a6be93180bbd53";
+	
+	private AdBanner mAdBanner;
+	private FrameLayout mAdContainer;
+	
+	public AdManager(AppActivity context, FrameLayout layout) {
+		mContext = context;
+		mLayout = layout;
+		FrameLayout mAdContainer = new FrameLayout(mContext);
+		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, 160);
+		params.gravity = Gravity.BOTTOM | Gravity.CENTER;
+		mLayout.addView(mAdContainer, params);
+	}
+	
+	/**
+	 * 初始化广告
+	 * @return
+	 */
+	public boolean init() {
+		try {
+			Ads.init(mContext, ADS_APP_ID, ADS_SECRET_KEY);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+
+	public void showBannerAd() {
+		Ads.showBannerAd(mContext, mAdContainer,BANNER_ID);
+	}
+	
+	public void hideBannerAd() {
+		
+	}
+	
+	public void showWallAd() {
+		
+	}
+	
+	public void onStart() {
+		if (mAdBanner != null) {
+			mAdBanner.startAutoScroll();
+		}
+	}
+	
+	public void onStop() {
+		if (mAdBanner != null) {
+			mAdBanner.stopAutoScroll();
+		}
+	}
+}

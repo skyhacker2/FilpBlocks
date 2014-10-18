@@ -33,11 +33,11 @@ function GameLayer:init()
     self:addChild(self.tips) 
     
     -- 显示广告
---    local entry = nil
---    entry = scheduler:scheduleScriptFunc(function()
---        showAds()
---        scheduler:unscheduleScriptEntry(entry)
---    end,1,false)
+    local entry = nil
+    entry = scheduler:scheduleScriptFunc(function()
+        showAds()
+        scheduler:unscheduleScriptEntry(entry)
+    end,1,false)
     
     -- 返回键
     local backListener = cc.EventListenerKeyboard:create()

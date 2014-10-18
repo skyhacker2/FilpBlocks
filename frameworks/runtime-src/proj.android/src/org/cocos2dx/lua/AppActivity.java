@@ -30,13 +30,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Random;
-
-import net.youmi.android.AdManager;
-import net.youmi.android.banner.AdSize;
-import net.youmi.android.banner.AdView;
-import net.youmi.android.dev.OnlineConfigCallBack;
-import net.youmi.android.spot.SpotManager;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -67,7 +60,6 @@ import android.os.Message;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
-import android.view.Gravity;
 import android.widget.FrameLayout;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
@@ -79,7 +71,6 @@ public class AppActivity extends Cocos2dxActivity{
 	
 	static Vibrator mVibrator;
 	
-	static AdView mAdView;
 	static FrameLayout.LayoutParams mAdViewLayoutParams;
 	
 	static FrameLayout mCopyFrameLayout;
@@ -88,6 +79,8 @@ public class AppActivity extends Cocos2dxActivity{
 	
 	static boolean mShownAds = false;
 	static boolean mCanShowAd = true;
+	
+	static org.cocos2dx.lua.AdManager mAdManager;
 	
 	static Cocos2dxActivity mContext;
 	
@@ -172,82 +165,39 @@ public class AppActivity extends Cocos2dxActivity{
 		mVibrator.vibrate(pattern, -1);
 	}
 	public void appInit() {
-		AdManager.getInstance(this).init("be175c01d4075b98", "e1cd44cbf9e5e7a3", false);
-		AdManager.getInstance(this).setUserDataCollect(true);
-		// 广告条
-		mAdViewLayoutParams = new FrameLayout.LayoutParams(
-				FrameLayout.LayoutParams.WRAP_CONTENT,
-				FrameLayout.LayoutParams.WRAP_CONTENT);
-		// 设置广告条的悬浮位置
-		mAdViewLayoutParams.gravity = Gravity.BOTTOM | Gravity.CENTER; // 上方
-		// 实例化广告条
-		mAdView = new AdView(this,
-				AdSize.FIT_SCREEN);
-		// 调用Activity的addContentView函数
-		//mFrameLayout.addView(mAdView, mAdViewLayoutParams);
-		mCopyFrameLayout = mFrameLayout;
-		//showAds();
 		mHandler = new Handler(this.getMainLooper());
-		//getOnlineConfig();
-//		AdManager.getInstance(this).asyncGetOnlineConfig("ShowAD", new OnlineConfigCallBack() {
-//		    @Override
-//		    public void onGetOnlineConfigSuccessful(String key, String value) {
-//		        // 获取在线参数成功
-//		    	Log.d(TAG, "在线参数: " + key + ": " + value);
-//		    	if (value == "true") {
-//		    		mCanShowAd = true;
-//		    		if (!mShownAds) {
-//		    			showAds();
-//		    		}
-//		    	} else if (value == "false") {
-//		    		mCanShowAd = false;
-//		    		hideAds();
-//		    	}
-//		    }
-//
-//		    @Override
-//		    public void onGetOnlineConfigFailed(String key) {
-//		        // 获取在线参数失败，可能原因有：键值未设置或为空、网络异常、服务器异常
-//		    	Log.d(TAG, "获取在线参数失败");
-//		    }
-//		});
+		mAdManager = new org.cocos2dx.lua.AdManager(this, mFrameLayout);
+		if (!mAdManager.init()) {
+			Log.d(TAG, "豌豆荚广告初始化失败");
+		} else {
+			//mAdManager.showBannerAd();
+		}
 	}
 	
 	// jni 显示广告
 	public static void showAds() {
-		if (!mCanShowAd) {
-			return;
-		}
-		if (mShownAds) {
-			return;
-		}
 		Log.d(TAG, "显示广告");
-		mShownAds = true;
 		mHandler.post(new Runnable() {
 			
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
-				Log.d(TAG, "添加广告条");
-				mCopyFrameLayout.addView(mAdView, mAdViewLayoutParams);
+				mAdManager.showBannerAd();
 			}
 		});
+		
 		
 	}
 	// jni 隐藏广告
 	public static void hideAds() {
 		Log.d(TAG, "隐藏广告");
-		if (!mShownAds) {
-			return;
-		}
-		mShownAds = false;
 		mHandler.post(new Runnable() {
 			
 			@Override
 			public void run() {
-				mCopyFrameLayout.removeView(mAdView);
+				mAdManager.hideBannerAd();
 			}
 		});
+		
 		
 	}
 	// 评分
@@ -321,7 +271,6 @@ public class AppActivity extends Cocos2dxActivity{
 	
 	@Override
 	protected void onDestroy() {
-		SpotManager.getInstance(this).unregisterSceenReceiver();
 		super.onDestroy();
 	}
 	
@@ -386,10 +335,18 @@ public class AppActivity extends Cocos2dxActivity{
 			}
 		}).start();
 	}
+
 	@Override
-	protected void onResume() {
-		super.onResume();
-		getOnlineConfig();
+	protected void onStart() {
+		mAdManager.onStart();
+		super.onStart();
 	}
+	@Override
+	protected void onStop() {
+		mAdManager.onStop();
+		super.onStop();
+	}
+	
+	
 	
 }

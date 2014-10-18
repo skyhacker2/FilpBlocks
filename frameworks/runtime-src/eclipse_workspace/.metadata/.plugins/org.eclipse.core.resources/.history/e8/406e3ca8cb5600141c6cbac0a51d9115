@@ -1,0 +1,5 @@
+package org.cocos2dx.lua;
+
+public class AdManager {
+
+}

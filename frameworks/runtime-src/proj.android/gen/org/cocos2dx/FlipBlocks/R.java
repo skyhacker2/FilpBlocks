@@ -9,11 +9,481 @@ package org.cocos2dx.FlipBlocks;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsDividerColor=0x7f010002;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsDividerPadding=0x7f010005;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsIndicatorColor=0x7f010000;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsIndicatorHeight=0x7f010003;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsScrollOffset=0x7f010007;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsShouldExpand=0x7f010009;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int pstsTabBackground=0x7f010008;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsTabPaddingLeftRight=0x7f010006;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsTabTextColor=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsTextAllCaps=0x7f01000a;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsUnderlineColor=0x7f010001;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int pstsUnderlineHeight=0x7f010004;
+    }
+    public static final class color {
+        public static final int background_tab_pressed=0x7f04000a;
+        public static final int color_tab_text_default=0x7f04000e;
+        public static final int color_tab_text_green=0x7f04000f;
+        public static final int wandou_ad_blue_disabled=0x7f040005;
+        public static final int wandou_ad_blue_normal=0x7f040003;
+        public static final int wandou_ad_blue_pressed=0x7f040004;
+        public static final int wandou_ads_green_disabled=0x7f040002;
+        public static final int wandou_ads_green_normal=0x7f040000;
+        public static final int wandou_ads_green_pressed=0x7f040001;
+        public static final int wandou_ads_grey_normal=0x7f040006;
+        public static final int wandou_ads_grey_pressed=0x7f040007;
+        public static final int wandou_font_color_black=0x7f040008;
+        public static final int wandou_font_color_white=0x7f040009;
+        public static final int wandou_grey=0x7f04000b;
+        public static final int wandou_light_yellow=0x7f04000d;
+        public static final int wandou_white=0x7f04000c;
+    }
+    public static final class dimen {
+        /**  Default screen margins, per the Android Design guidelines. 
+         */
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+        public static final int screenshot_height=0x7f050003;
+        public static final int screenshot_width=0x7f050002;
+        public static final int wallpaper_divider_width=0x7f050004;
+        public static final int wdj_ad_container_horizontal_margin=0x7f050005;
     }
     public static final class drawable {
-        public static final int icon=0x7f020000;
+        public static final int background_tab=0x7f020000;
+        public static final int bg_explore_actionbar=0x7f020001;
+        public static final int bg_explore_bottombar_shadow=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int icon=0x7f020004;
+        public static final int wdj_ad_card_background_flat=0x7f020005;
+        public static final int wdj_ad_card_background_highlight=0x7f020006;
+        public static final int wdj_ad_close_button_background=0x7f020007;
+        public static final int wdj_ads_action_button_background=0x7f020008;
+        public static final int wdj_ads_card_background_normal=0x7f020009;
+        public static final int wdj_ads_card_highlighted=0x7f02000a;
+        public static final int wdj_ads_card_normal=0x7f02000b;
+        public static final int wdj_ads_card_pressed=0x7f02000c;
+        public static final int wdj_ads_close_widget_button_background=0x7f02000d;
+        public static final int wdj_ads_detail_install_button_background=0x7f02000e;
+        public static final int wdj_ads_empty_background=0x7f02000f;
+        public static final int wdj_ads_progress_bar_background=0x7f020010;
+        public static final int wdj_ads_title_back_normal=0x7f020011;
+        public static final int wdj_phoenix_themed_button_background_default=0x7f020012;
+        public static final int wdj_phoenix_themed_button_background_grey=0x7f020013;
+        public static final int wdj_superior_app_icon=0x7f020014;
+    }
+    public static final class id {
+        public static final int action_button=0x7f060014;
+        public static final int app_detail_action_area=0x7f060031;
+        public static final int app_detail_app_sub_title=0x7f060036;
+        public static final int app_detail_app_title=0x7f060035;
+        public static final int app_detail_description_area=0x7f060039;
+        public static final int app_detail_icon=0x7f060033;
+        public static final int app_detail_image_gallery=0x7f060038;
+        public static final int app_detail_install_button=0x7f060032;
+        public static final int app_title_content=0x7f060034;
+        public static final int app_widget_close_button=0x7f060027;
+        public static final int app_widget_description=0x7f060024;
+        public static final int app_widget_empty_view=0x7f060028;
+        public static final int app_widget_icon=0x7f060021;
+        public static final int app_widget_install_button=0x7f060026;
+        public static final int app_widget_next_button=0x7f060025;
+        public static final int app_widget_sub_title=0x7f060023;
+        public static final int app_widget_title=0x7f060022;
+        public static final int badge=0x7f060019;
+        public static final int banner_ad_action_button=0x7f06000b;
+        public static final int banner_ad_icon=0x7f06000a;
+        public static final int banner_ad_sub_title=0x7f06000d;
+        public static final int banner_ad_title=0x7f06000c;
+        public static final int container=0x7f060006;
+        public static final int description=0x7f060017;
+        public static final int download_progress=0x7f06001c;
+        public static final int download_speed=0x7f06001b;
+        public static final int download_status=0x7f06001a;
+        public static final int empty_view=0x7f06001d;
+        public static final int icon=0x7f060013;
+        public static final int number_view=0x7f060012;
+        public static final int pager=0x7f06003d;
+        public static final int progress=0x7f06003b;
+        public static final int scroll_gallery=0x7f060037;
+        public static final int sub_title=0x7f060016;
+        public static final int tabs=0x7f06003c;
+        public static final int tag=0x7f060018;
+        public static final int tag_key_ad_id=0x7f060003;
+        public static final int tag_key_ad_package=0x7f060004;
+        public static final int tag_key_ad_type=0x7f060002;
+        public static final int tag_key_ads_item_downloading=0x7f060001;
+        public static final int tag_key_ads_item_position=0x7f060000;
+        public static final int title=0x7f060015;
+        public static final int title_view=0x7f060011;
+        public static final int wdj_ad_banner_root=0x7f06000e;
+        public static final int wdj_ad_interstitial_big_picture=0x7f06000f;
+        public static final int wdj_ad_interstitial_layout=0x7f06003a;
+        public static final int wdj_ad_widget_cancel=0x7f06002f;
+        public static final int wdj_ad_widget_container=0x7f060009;
+        public static final int wdj_ad_widget_description=0x7f06002d;
+        public static final int wdj_ad_widget_divider=0x7f06002e;
+        public static final int wdj_ad_widget_download=0x7f060030;
+        public static final int wdj_ad_widget_icon=0x7f06002a;
+        public static final int wdj_ad_widget_interstitial=0x7f060008;
+        public static final int wdj_ad_widget_sub_title=0x7f06002c;
+        public static final int wdj_ad_widget_title=0x7f06002b;
+        public static final int wdj_ads_title_bar=0x7f060005;
+        public static final int wdj_ads_widget_view=0x7f06001f;
+        public static final int wdj_app_widget_container=0x7f060007;
+        public static final int wdj_app_widget_content_view=0x7f060020;
+        public static final int wdj_apps_list=0x7f06001e;
+        public static final int wdj_big_interstitial_close_button=0x7f060010;
+        public static final int wdj_big_interstitial_layout=0x7f060029;
+    }
+    public static final class layout {
+        public static final int wdj_activity_app_wall=0x7f030000;
+        public static final int wdj_activity_app_widget_container=0x7f030001;
+        public static final int wdj_ad_banner_item_layout=0x7f030002;
+        public static final int wdj_ad_banner_layout=0x7f030003;
+        public static final int wdj_ad_interstitial_big_picture=0x7f030004;
+        public static final int wdj_ad_tab_view=0x7f030005;
+        public static final int wdj_app_item_in_ads_view=0x7f030006;
+        public static final int wdj_app_list_view=0x7f030007;
+        public static final int wdj_app_widget_view=0x7f030008;
+        public static final int wdj_fragment_ad_widget=0x7f030009;
+        public static final int wdj_fragment_ads_detail=0x7f03000a;
+        public static final int wdj_interstitial_activity_layout=0x7f03000b;
+        public static final int wdj_load_more_list_footer=0x7f03000c;
+        public static final int wdj_smart_advew_default=0x7f03000d;
+        public static final int wdj_tab_fragment=0x7f03000e;
     }
     public static final class string {
-        public static final int app_name=0x7f030000;
+        public static final int action_settings=0x7f070002;
+        public static final int ads_install_at_once_text=0x7f070007;
+        public static final int ads_install_text=0x7f070006;
+        public static final int ads_next_text=0x7f070005;
+        public static final int app_name=0x7f070000;
+        public static final int download_count=0x7f070003;
+        public static final int hello_world=0x7f070001;
+        public static final int netop_network_error=0x7f070008;
+        public static final int no_result_text=0x7f070004;
+        public static final int wdj_ad_cancel=0x7f070009;
+        public static final int wdj_ad_confirm_title=0x7f07000b;
+        public static final int wdj_ad_download=0x7f07000a;
     }
+    public static final class style {
+        public static final int GenericProgressBackground=0x7f080001;
+        public static final int GenericProgressIndicator=0x7f080002;
+        public static final int detail_description=0x7f080000;
+        public static final int text_message_count=0x7f080003;
+        public static final int text_message_count_tab=0x7f080004;
+    }
+    public static final class styleable {
+        /** Attributes that can be used with a PagerSlidingTabStrip.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsDividerColor org.cocos2dx.FlipBlocks:pstsDividerColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsDividerPadding org.cocos2dx.FlipBlocks:pstsDividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsIndicatorColor org.cocos2dx.FlipBlocks:pstsIndicatorColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsIndicatorHeight org.cocos2dx.FlipBlocks:pstsIndicatorHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsScrollOffset org.cocos2dx.FlipBlocks:pstsScrollOffset}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsShouldExpand org.cocos2dx.FlipBlocks:pstsShouldExpand}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsTabBackground org.cocos2dx.FlipBlocks:pstsTabBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsTabPaddingLeftRight org.cocos2dx.FlipBlocks:pstsTabPaddingLeftRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsTabTextColor org.cocos2dx.FlipBlocks:pstsTabTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsTextAllCaps org.cocos2dx.FlipBlocks:pstsTextAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsUnderlineColor org.cocos2dx.FlipBlocks:pstsUnderlineColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsUnderlineHeight org.cocos2dx.FlipBlocks:pstsUnderlineHeight}</code></td><td></td></tr>
+           </table>
+           @see #PagerSlidingTabStrip_pstsDividerColor
+           @see #PagerSlidingTabStrip_pstsDividerPadding
+           @see #PagerSlidingTabStrip_pstsIndicatorColor
+           @see #PagerSlidingTabStrip_pstsIndicatorHeight
+           @see #PagerSlidingTabStrip_pstsScrollOffset
+           @see #PagerSlidingTabStrip_pstsShouldExpand
+           @see #PagerSlidingTabStrip_pstsTabBackground
+           @see #PagerSlidingTabStrip_pstsTabPaddingLeftRight
+           @see #PagerSlidingTabStrip_pstsTabTextColor
+           @see #PagerSlidingTabStrip_pstsTextAllCaps
+           @see #PagerSlidingTabStrip_pstsUnderlineColor
+           @see #PagerSlidingTabStrip_pstsUnderlineHeight
+         */
+        public static final int[] PagerSlidingTabStrip = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b
+        };
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsDividerColor}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsDividerColor
+        */
+        public static final int PagerSlidingTabStrip_pstsDividerColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsDividerPadding}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsDividerPadding
+        */
+        public static final int PagerSlidingTabStrip_pstsDividerPadding = 5;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsIndicatorColor}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsIndicatorColor
+        */
+        public static final int PagerSlidingTabStrip_pstsIndicatorColor = 0;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsIndicatorHeight}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsIndicatorHeight
+        */
+        public static final int PagerSlidingTabStrip_pstsIndicatorHeight = 3;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsScrollOffset}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsScrollOffset
+        */
+        public static final int PagerSlidingTabStrip_pstsScrollOffset = 7;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsShouldExpand}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsShouldExpand
+        */
+        public static final int PagerSlidingTabStrip_pstsShouldExpand = 9;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsTabBackground}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name org.cocos2dx.FlipBlocks:pstsTabBackground
+        */
+        public static final int PagerSlidingTabStrip_pstsTabBackground = 8;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsTabPaddingLeftRight}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsTabPaddingLeftRight
+        */
+        public static final int PagerSlidingTabStrip_pstsTabPaddingLeftRight = 6;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsTabTextColor}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsTabTextColor
+        */
+        public static final int PagerSlidingTabStrip_pstsTabTextColor = 11;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsTextAllCaps}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsTextAllCaps
+        */
+        public static final int PagerSlidingTabStrip_pstsTextAllCaps = 10;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsUnderlineColor}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsUnderlineColor
+        */
+        public static final int PagerSlidingTabStrip_pstsUnderlineColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link org.cocos2dx.FlipBlocks.R.attr#pstsUnderlineHeight}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name org.cocos2dx.FlipBlocks:pstsUnderlineHeight
+        */
+        public static final int PagerSlidingTabStrip_pstsUnderlineHeight = 4;
+    };
 }

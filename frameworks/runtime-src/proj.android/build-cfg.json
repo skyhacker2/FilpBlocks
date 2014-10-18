@@ -13,13 +13,14 @@
                 "*.gz"
             ]
         },
-        {
+                {
             "from": "../../../res",
             "to": "res",
             "exclude": [
                 "*.gz"
             ]
         }
+
     ],
     "must_copy_resources": [
         {

@@ -26,22 +26,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-		    android:name="net.youmi.android.AdBrowser"
-		    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-		    android:theme="@android:style/Theme.Light.NoTitleBar" >
-		</activity>
-		<service
-		    android:name="net.youmi.android.AdService"
-		    android:exported="false" >
-		</service>
-		<receiver
-		    android:name="net.youmi.android.AdReceiver" >
-		    <intent-filter>
-		        <action android:name="android.intent.action.PACKAGE_ADDED" />
-		        <data android:scheme="package" />
-		    </intent-filter>
-		</receiver>
+		<activity
+			android:name="com.wandoujia.ads.sdk.AppWallActivity"
+			android:launchMode="singleTop"
+			android:configChanges="orientation|keyboardHidden|screenSize"/>
+			 
+			<activity
+			android:name="com.wandoujia.ads.sdk.AppWidgetContainerActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:configChanges="orientation|keyboardHidden|screenSize"/>
+			 
+			<activity android:name="com.wandoujia.ads.sdk.InterstitialAdActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:configChanges="orientation|keyboardHidden|screenSize"/>
+			 
+			<service android:name="com.wandoujia.ads.sdk.DownloadService"/>
+			 
+			<receiver android:name="com.wandoujia.ads.sdk.AppChangedReceiver">
+			<intent-filter>
+			<action android:name="android.intent.action.PACKAGE_ADDED"/>
+			 
+			<data android:scheme="package"/>
+			</intent-filter>
+			</receiver>
     </application>
 
     <supports-screens android:anyDensity="true"
