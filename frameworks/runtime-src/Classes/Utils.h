@@ -18,6 +18,8 @@ public:
     
     static void share(std::string text);
     
+    static void showDialog(std::string okStr, std::string cancelStr, std::string title, std::string msg);
+    
 };
 
 #endif /* defined(__FlipBlocks__Utils__) */

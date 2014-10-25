@@ -43,12 +43,19 @@ function GameLayer:init()
     local backListener = cc.EventListenerKeyboard:create()
     backListener:registerScriptHandler(function(keyCode, event)
         -- 小米的的返回键是6 = =！
-        if keyCode == cc.KeyCode.KEY_BACKSPACE or keyCode == 6 then
-            cc.Director:getInstance():endToLua()
+        if keyCode == cc.KeyCode.KEY_ESCAPE or keyCode == 6 then
+            print("show dialog")
+            showDialog("Yes", "No", "Alert", "Exit the game?")
         end
     end,cc.Handler.EVENT_KEYBOARD_RELEASED)
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(backListener, self)
+    
+    local dialogListener = cc.EventListenerCustom:create("e_exit_game",function(event)
+        print("exit game")
+        cc.Director:getInstance():endToLua() 
+    end)
+    eventDispatcher:addEventListenerWithFixedPriority(dialogListener, 1)
 end
 
 function GameLayer:initWelcomeLayer()

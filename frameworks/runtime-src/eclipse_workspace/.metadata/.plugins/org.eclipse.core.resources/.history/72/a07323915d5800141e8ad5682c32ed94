@@ -1,0 +1,29 @@
+package org.cocos2dx.lua;
+
+import android.widget.FrameLayout;
+
+public class YoumiAdManager implements IAdManager{
+	
+	private AppActivity mContext;
+	private FrameLayout mLayout;
+
+	public YoumiAdManager(AppActivity context, FrameLayout layout) {
+		
+	}
+
+	@Override
+	public boolean init() {
+		return false;
+	}
+
+	@Override
+	public void showBannerAd() {
+		
+	}
+
+	@Override
+	public void hideBannerAd() {
+		
+	}
+
+}

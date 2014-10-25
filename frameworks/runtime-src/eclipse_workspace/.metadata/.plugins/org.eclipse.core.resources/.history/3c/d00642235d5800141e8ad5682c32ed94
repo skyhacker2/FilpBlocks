@@ -1,0 +1,9 @@
+package org.cocos2dx.lua;
+
+public interface IAdManager {
+	
+	public void showBannerAd();
+	
+	public void hideBannerAd();
+
+}

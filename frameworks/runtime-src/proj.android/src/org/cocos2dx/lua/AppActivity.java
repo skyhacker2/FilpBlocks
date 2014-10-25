@@ -31,14 +31,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 import org.cocos2dx.lib.Cocos2dxActivity;
 
 import android.app.AlertDialog;
@@ -55,8 +47,6 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
@@ -80,9 +70,9 @@ public class AppActivity extends Cocos2dxActivity{
 	static boolean mShownAds = false;
 	static boolean mCanShowAd = true;
 	
-	static org.cocos2dx.lua.AdManager mAdManager;
+	static IAdManager mAdManager;
 	
-	static Cocos2dxActivity mContext;
+	static AppActivity mContext;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -166,9 +156,10 @@ public class AppActivity extends Cocos2dxActivity{
 	}
 	public void appInit() {
 		mHandler = new Handler(this.getMainLooper());
-		mAdManager = new org.cocos2dx.lua.AdManager(this, mFrameLayout);
+		//mAdManager = new org.cocos2dx.lua.WandoujiaAdManager(this, mFrameLayout);
+		mAdManager = new YoumiAdManager(this, mFrameLayout);
 		if (!mAdManager.init()) {
-			Log.d(TAG, "豌豆荚广告初始化失败");
+			Log.d(TAG, "广告初始化失败");
 		} else {
 			//mAdManager.showBannerAd();
 		}
@@ -269,84 +260,40 @@ public class AppActivity extends Cocos2dxActivity{
 
 	}
 	
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-	}
+	/**
+	 * 退出对话框确认退出
+	 */
+	public native void onExitDialogConfirm();
 	
-	
-	private Handler mHttpHandler = new Handler() {
-
-		@Override
-		public void handleMessage(Message msg) {
-			Log.d(TAG, "msg = " + msg);
-			if (msg.what == 1) {
-				mCanShowAd = true;
-				this.postDelayed(new Runnable() {
-					
-					@Override
-					public void run() {
-						showAds();
-					}
-				}, 2000);
-				
-			} else {
-				mCanShowAd = false;
-				this.postDelayed(new Runnable() {
-					
-					@Override
-					public void run() {
-						hideAds();
-					}
-				}, 2000);
-			}
-		}
-		
-	};
-	
-	void getOnlineConfig() {
-		new Thread(new Runnable() {
+	public static void showDialog(final String okStr, final String cancelStr, final String title, final String msg) {
+		mHandler.post(new Runnable() {
 			
 			@Override
 			public void run() {
-				Looper.prepare();
-				HttpGet request = new HttpGet("https://raw.githubusercontent.com/skyhacker2/FilpBlocks/master/ad.txt");
-				request.setHeader("Cache-Control", "no-cache"); 
-				HttpClient client = new DefaultHttpClient();
-				try {
-					HttpResponse response = client.execute(request);
-					if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
-						HttpEntity entity = response.getEntity();
-						String content = new String(EntityUtils.toString(entity));
-						Log.d(TAG, "配置内容: " + content);
-						if (content.equals("true")){
-							mHttpHandler.sendEmptyMessage(1);
-						} else {
-							mHttpHandler.sendEmptyMessage(0);
-						}
+				AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+				builder.setTitle(title);
+				builder.setMessage(msg);
+				builder.setPositiveButton(okStr, new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+						mContext.onExitDialogConfirm();
 					}
-				} catch (ClientProtocolException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				});
+				builder.setNegativeButton(cancelStr, new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+				});
+				builder.show();
+				
 			}
-		}).start();
+		});
+		
 	}
-
-	@Override
-	protected void onStart() {
-		mAdManager.onStart();
-		super.onStart();
-	}
-	@Override
-	protected void onStop() {
-		mAdManager.onStop();
-		super.onStop();
-	}
-	
 	
 	
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.os.Vibrator"/>
-<fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="android.graphics.Bitmap"/>
 <fullyQualifiedTypeName name="android.view.View.MeasureSpec"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
@@ -17,7 +16,19 @@
 <fullyQualifiedTypeName name="org.apache.http.HttpEntity"/>
 <fullyQualifiedTypeName name="org.apache.http.util.EntityUtils"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="net.youmi.android.diy.banner.DiyBanner"/>
 <fullyQualifiedTypeName name="net.youmi.android.diy.banner.DiyAdSize"/>
+<fullyQualifiedTypeName name="com.wandoujia.ads.sdk.Ads"/>
+<fullyQualifiedTypeName name="android.view.ViewGroup.LayoutParams"/>
+<fullyQualifiedTypeName name="android.widget.FrameLayout.LayoutParams"/>
+<fullyQualifiedTypeName name="net.youmi.android.AdManager"/>
+<fullyQualifiedTypeName name="org.cocos2dx.lua.AdManager"/>
+<fullyQualifiedTypeName name="android.view.Gravity"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="org.cocos2dx.lua.AppActivity"/>
+<fullyQualifiedTypeName name="org.cocos2dx.lua.IAdManager"/>
+<fullyQualifiedTypeName name="x.i.p.Uwaf"/>
+<fullyQualifiedTypeName name="android.widget.FrameLayout"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="org.cocos2dx.lua.YoumiAdManager"/>
 </qualifiedTypeNameHistroy>

@@ -110,6 +110,34 @@ static int lua_close_game(lua_State* L)
     return 0;
 }
 
+static int lua_show_dialog(lua_State* L)
+{
+    if (nullptr == L)
+    {
+        return 0;
+    }
+    CCLOG("lua_show_dialog");
+    int argc = lua_gettop(L);
+    if (4 == argc)
+    {
+        if (!lua_isstring(L, 1) || !lua_isstring(L, 2) || !lua_isstring(L, 3) ||!lua_isstring(L, 4))
+        {
+            CCLOG("Error: 参数需要字符串");
+            return 0;
+        }
+        const char* okStr = lua_tostring(L, 1);
+        const char* cancelStr = lua_tostring(L, 2);
+        const char* title = lua_tostring(L, 3);
+        const char* msg = lua_tostring(L, 4);
+        Utils::showDialog(okStr, cancelStr, title, msg);
+    }
+    else
+    {
+        CCLOG("需要4个参数 okStr, cancelStr, title, msg");
+    }
+    return 0;
+}
+
 
 int register_all_custom_manual(lua_State* L)
 {
@@ -122,6 +150,7 @@ int register_all_custom_manual(lua_State* L)
 	tolua_function(L, "hideAds", lua_adManager_hideAds);
     tolua_function(L, "rateApp", lua_rate_app);
     tolua_function(L, "share", lua_share);
+    tolua_function(L, "showDialog", lua_show_dialog);
 	tolua_endmodule(L);
 	return 0;
 }
