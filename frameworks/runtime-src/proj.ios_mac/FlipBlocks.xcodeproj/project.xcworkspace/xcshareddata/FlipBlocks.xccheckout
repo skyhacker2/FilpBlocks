@@ -14,7 +14,7 @@
 		<string>https://github.com/skyhacker2/FilpBlocks.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>frameworks/runtime-src/proj.ios_mac/FlipBlocks.xcodeproj/project.xcworkspace</string>
+	<string>frameworks/runtime-src/proj.ios_mac/FlipBlocks.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6CA7F9CEF34E148F1F4E5705FBE6888654903D49</key>
