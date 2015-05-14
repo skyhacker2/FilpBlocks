@@ -3,6 +3,7 @@ package org.cocos2dx.lua;
 import x.i.p.Uwaf;
 import x.i.p.br.Uwak;
 import x.i.p.br.Uwan;
+import x.i.p.diy.Uwbc;
 import x.i.p.onlineconfig.Uwbn;
 import android.util.Log;
 import android.view.Gravity;
@@ -65,6 +66,11 @@ public class YoumiAdManager implements IAdManager{
 			mLayout.removeView(mContainer);
 			mContainer = null;
 		}
+	}
+
+	@Override
+	public void showWall() {
+		Uwbc.pcs(mContext);
 	}
 
 }

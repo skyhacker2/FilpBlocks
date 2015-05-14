@@ -24,11 +24,14 @@
 <fullyQualifiedTypeName name="net.youmi.android.AdManager"/>
 <fullyQualifiedTypeName name="org.cocos2dx.lua.AdManager"/>
 <fullyQualifiedTypeName name="android.view.Gravity"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="org.cocos2dx.lua.AppActivity"/>
 <fullyQualifiedTypeName name="org.cocos2dx.lua.IAdManager"/>
 <fullyQualifiedTypeName name="x.i.p.Uwaf"/>
 <fullyQualifiedTypeName name="android.widget.FrameLayout"/>
 <fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="org.cocos2dx.lua.YoumiAdManager"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="com.wandoujia.ads.sdk.loader.Fetcher.AdFormat"/>
+<fullyQualifiedTypeName name="org.cocos2dx.lua.WandoujiaAdManager"/>
+<fullyQualifiedTypeName name="com.eleven.game.libpluginutils.facade.Facade"/>
 </qualifiedTypeNameHistroy>

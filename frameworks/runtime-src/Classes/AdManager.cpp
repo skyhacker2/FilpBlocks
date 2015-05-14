@@ -63,6 +63,21 @@ void AdManager::hideAds()
 	}
 	CCLog("jni-java 执行完毕");
 }
+
+void AdManager::showWall()
+{
+    CCLOG("AdManager::showWall()");
+    JniMethodInfo minfo;
+    // 无参数
+    bool isHave = JniHelper::getStaticMethodInfo(minfo, CLASS_NAME, "showWall", "()V");
+    if (!isHave) {
+        CCLog("jni: showWall 不存在");
+    } else {
+        minfo.env->CallStaticVoidMethod(minfo.classID, minfo.methodID);
+    }
+    CCLog("jni-java 执行完毕");
+}
+
 #endif
 
 // iOS平台
@@ -73,6 +88,11 @@ void AdManager::showAds()
 }
 
 void AdManager::hideAds()
+{
+    
+}
+
+void AdManager::showWall()
 {
     
 }

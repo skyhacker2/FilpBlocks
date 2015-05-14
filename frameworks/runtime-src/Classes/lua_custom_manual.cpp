@@ -44,6 +44,17 @@ static int lua_adManager_hideAds(lua_State* L)
 	return 0;
 }
 
+static int lua_adManager_showWall(lua_State* L)
+{
+    if (nullptr == L) {
+        return 0;
+    }
+    CCLOG("lua_adManager_showWall");
+    AdManager::getInstance()->showWall();
+
+    return 0;
+}
+
 
 /**
  * 振动手机
@@ -151,6 +162,7 @@ int register_all_custom_manual(lua_State* L)
     tolua_function(L, "rateApp", lua_rate_app);
     tolua_function(L, "share", lua_share);
     tolua_function(L, "showDialog", lua_show_dialog);
+    tolua_function(L, "showWall", lua_adManager_showWall);
 	tolua_endmodule(L);
 	return 0;
 }

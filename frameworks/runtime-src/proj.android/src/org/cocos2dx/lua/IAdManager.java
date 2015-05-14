@@ -7,5 +7,7 @@ public interface IAdManager {
 	public void showBannerAd();
 	
 	public void hideBannerAd();
+	
+	public void showWall();
 
 }

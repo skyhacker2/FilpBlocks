@@ -23,9 +23,9 @@ AppDelegate::~AppDelegate()
 bool AppDelegate::applicationDidFinishLaunching()
 {
 
-#if (COCOS2D_DEBUG>0)
-    initRuntime();
-#endif
+//#if (COCOS2D_DEBUG>0)
+//    initRuntime();
+//#endif
 
     if (!ConfigParser::getInstance()->isInit()) {
             ConfigParser::getInstance()->readConfig();
@@ -70,10 +70,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     };
     director->getEventDispatcher()->addEventListenerWithFixedPriority(backListener, -1000);
 
-#if (COCOS2D_DEBUG>0)
-    if (startRuntime())
-        return true;
-#endif
+//#if (COCOS2D_DEBUG>0)
+//    if (startRuntime())
+//        return true;
+//#endif
     
     CCLOG("%s",ConfigParser::getInstance()->getEntryFile().c_str());
     engine->executeScriptFile(ConfigParser::getInstance()->getEntryFile().c_str());

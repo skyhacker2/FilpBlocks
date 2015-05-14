@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="50dp"
+              android:background="@drawable/card_background"
+              android:descendantFocusability="blocksDescendants"
+              android:orientation="horizontal"
+              android:paddingBottom="5dp"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:paddingTop="5dp"
+              android:theme="@style/Theme.AppCompat.Light">
+
+    <ImageView
+        android:id="@id/wdj_ad_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"/>
+
+    <FrameLayout
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/wdj_ad_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@id/wdj_ad_description"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@id/wdj_ad_install"
+            style="@style/InstallButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:minWidth="64dp"
+            android:minHeight="32dp"
+            android:layout_gravity="center_vertical|right"
+            android:textSize="14sp"/>
+    </FrameLayout>
+</LinearLayout>
+<!-- From: file:/Users/afpro/Desktop/Project/wandoujia/NewSdk/sdk/src/main/res/layout/banner.xml -->

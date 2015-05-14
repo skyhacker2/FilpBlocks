@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/afpro/Desktop/Project/wandoujia/NewSdk/sdk/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="action_bar_background_color">#000000</color>
+    <color name="app_wall_under_line_color">#336699</color>
+    <color name="translucent_background_color">#77000000</color>
+    <!-- From: file:/Users/afpro/Desktop/Project/wandoujia/NewSdk/sdk/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="app_detail_screenshot_height">300dp</dimen>
+    <dimen name="app_detail_screenshot_width">200dp</dimen>
+    <dimen name="app_wall_title_height">40dp</dimen>
+    <!-- From: file:/Users/afpro/Desktop/Project/wandoujia/NewSdk/sdk/src/main/res/values/ids.xml -->
+    <eat-comment/>
+    <item name="wdj_ad_cancel" type="id"/>
+    <item name="wdj_ad_close" type="id"/>
+    <item name="wdj_ad_description" type="id"/>
+    <item name="wdj_ad_editor_comment" type="id"/>
+    <item name="wdj_ad_editor_comment_container" type="id"/>
+    <item name="wdj_ad_icon" type="id"/>
+    <item name="wdj_ad_install" type="id"/>
+    <item name="wdj_ad_interstitial_banner" type="id"/>
+    <item name="wdj_ad_interstitial_banner_img" type="id"/>
+    <item name="wdj_ad_interstitial_non_banner" type="id"/>
+    <item name="wdj_ad_notification_progress_bar" type="id"/>
+    <item name="wdj_ad_notification_root" type="id"/>
+    <item name="wdj_ad_screen_shot_container" type="id"/>
+    <item name="wdj_ad_sub_title" type="id"/>
+    <item name="wdj_ad_title" type="id"/>
+    <!-- From: file:/Users/afpro/Desktop/Project/wandoujia/NewSdk/sdk/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_wall_action_bar_title">Apps!</string>
+    <string name="cancel">Cancel</string>
+    <string name="download_failed">Download failed</string>
+    <string name="download_failed_toast">Download failed, please retry later.</string>
+    <string name="downloading">Downloading</string>
+    <string name="install">Install</string>
+    <string name="install_format">%s install</string>
+    <string name="installed">Installed</string>
+    <string name="notification_touch_to_retry">Download failed. Click to retry.</string>
+    <string name="notification_waiting_for_download">Wait for download</string>
+    <string name="start_download">Start downloading</string>
+    <string name="wait_wifi">Will start download after wlan connected</string>
+    <!-- From: file:/Users/afpro/Desktop/Project/wandoujia/NewSdk/sdk/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="InstallButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/install_button</item>
+        <item name="android:text">@string/install</item>
+    </style>
+</resources>

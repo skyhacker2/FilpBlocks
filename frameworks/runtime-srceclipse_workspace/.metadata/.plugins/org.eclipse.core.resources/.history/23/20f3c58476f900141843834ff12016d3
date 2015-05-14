@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.cocos2dx.FlipBlocks"
+      android:versionCode="4"
+      android:versionName="1.3">
+
+    <uses-sdk android:minSdkVersion="9"/>
+    <uses-feature android:glEsVersion="0x00020000" />
+    
+    
+
+    <application android:label="@string/app_name"
+                 android:icon="@drawable/icon">
+					 
+        <!-- Tell Cocos2dxActivity the name of our .so -->
+        <meta-data android:name="android.app.lib_name"
+                  android:value="cocos2dlua" />
+					  
+        <activity android:name="org.cocos2dx.lua.AppActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity
+			android:name="com.wandoujia.ads.sdk.AppWallActivity"
+			android:launchMode="singleTop"
+			android:configChanges="orientation|keyboardHidden|screenSize"/>
+			 
+			<activity
+			android:name="com.wandoujia.ads.sdk.AppWidgetContainerActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:configChanges="orientation|keyboardHidden|screenSize"/>
+			 
+			<activity android:name="com.wandoujia.ads.sdk.InterstitialAdActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:configChanges="orientation|keyboardHidden|screenSize"/>
+			 
+			<service android:name="com.wandoujia.ads.sdk.DownloadService"/>
+			 
+			<receiver android:name="com.wandoujia.ads.sdk.AppChangedReceiver">
+			<intent-filter>
+			<action android:name="android.intent.action.PACKAGE_ADDED"/>
+			 
+			<data android:scheme="package"/>
+			</intent-filter>
+			</receiver>
+			<activity
+			    android:name="x.i.p.Uwaa"
+			    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+			    android:theme="@android:style/Theme.Light.NoTitleBar" >
+			</activity>
+			<service
+			    android:name="x.i.p.Uwaj"
+			    android:exported="false" >
+			</service>
+			<receiver
+			    android:name="x.i.p.Uwah" >
+			    <intent-filter>
+			        <action android:name="android.intent.action.PACKAGE_ADDED" />
+			        <data android:scheme="package" />
+			    </intent-filter>
+			</receiver>
+			<provider
+			    android:name="x.i.p.st.Uwbu"
+			    android:authorities="org.cocos2dx.FlipBlocks"/>
+		<activity 
+		    android:name="com.umeng.update.UpdateDialogActivity"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+		</activity>
+		<meta-data android:value="54ac08fbfd98c59082001184" android:name="UMENG_APPKEY" />
+		<meta-data android:value="Umeng" android:name="UMENG_CHANNEL"/>
+    </application>
+
+    <supports-screens android:anyDensity="true"
+                      android:smallScreens="true"
+                      android:normalScreens="true"
+                      android:largeScreens="true"
+                      android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>  
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>  
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>  
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>  
+    
+  	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+ 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+ 	<uses-permission android:name="android.permission.VIBRATE"/>
+ 		<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<!-- 以下为可选权限 -->
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+	<meta-data android:name="YOUMI_CHANNEL"
+	    android:value="10190" >
+	</meta-data>
+</manifest> 

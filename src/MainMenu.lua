@@ -6,6 +6,7 @@ function MainMenu:ctor()
     self.simpleMenu = nil
     self.middleMenu = nil
     self.hardMenu = nil
+    self.moreMenu = nil
     self.vibrationMenu = nil
     self.musicMenu = nil
     self.colorNumMenu = nil
@@ -41,9 +42,14 @@ function MainMenu:initMenu()
     self.hardMenu:runAction(createMenuAction(cc.p(ws.width/2,500),0.2))
     self:addChild(self.hardMenu)
     
+    self.moreMenu = ccui.Button:create("res/more_btn.png")
+    self.moreMenu:setPosition(ws.width/2, -300)
+    self.moreMenu:runAction(createMenuAction(cc.p(ws.width/2, 350),0.2))
+    self:addChild(self.moreMenu)
+    
     self.settingMenu = ccui.Button:create("res/setting_btn.png")
-    self.settingMenu:setPosition(ws.width/2,-300) 
-    self.settingMenu:runAction(createMenuAction(cc.p(ws.width/2,350),0.3))
+    self.settingMenu:setPosition(ws.width/2,-400) 
+    self.settingMenu:runAction(createMenuAction(cc.p(ws.width/2,200),0.3))
     self:addChild(self.settingMenu)
 end
 
@@ -165,6 +171,9 @@ function MainMenu:showSubMenu()
     x, y = self.hardMenu:getPosition()
     self.hardMenu:runAction(createMoveOutAction(cc.p(-120,y),0.1))
     
+    x, y = self.moreMenu:getPosition()
+    self.moreMenu:runAction(createMoveOutAction(cc.p(-120,y),0.1))
+    
     x, y = self.settingMenu:getPosition()
     self.settingMenu:runAction(createMoveUpAction(cc.p(x,800),0.15))
     
@@ -193,9 +202,12 @@ function MainMenu:hideSubMenu()
 
     x, y = self.hardMenu:getPosition()
     self.hardMenu:runAction(createMoveInAction(cc.p(ws.width/2,y),0.4))
+
+    x, y = self.moreMenu:getPosition()
+    self.moreMenu:runAction(createMoveInAction(cc.p(ws.width/2,y),0.4))
     
     x, y = self.settingMenu:getPosition()
-    self.settingMenu:runAction(createMoveInAction(cc.p(x,350),0))
+    self.settingMenu:runAction(createMoveInAction(cc.p(x,200),0))
     
     -- 子菜单
     x, y = self.vibrationMenu:getPosition()

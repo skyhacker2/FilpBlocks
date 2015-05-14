@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="org.cocos2dx.FlipBlocks"
-      android:versionCode="3"
-      android:versionName="1.2">
+      android:versionCode="5"
+      android:versionName="1.4">
 
     <uses-sdk android:minSdkVersion="9"/>
     <uses-feature android:glEsVersion="0x00020000" />
@@ -26,29 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-		<activity
-			android:name="com.wandoujia.ads.sdk.AppWallActivity"
-			android:launchMode="singleTop"
-			android:configChanges="orientation|keyboardHidden|screenSize"/>
-			 
-			<activity
-			android:name="com.wandoujia.ads.sdk.AppWidgetContainerActivity"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar"
-			android:configChanges="orientation|keyboardHidden|screenSize"/>
-			 
-			<activity android:name="com.wandoujia.ads.sdk.InterstitialAdActivity"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar"
-			android:configChanges="orientation|keyboardHidden|screenSize"/>
-			 
-			<service android:name="com.wandoujia.ads.sdk.DownloadService"/>
-			 
-			<receiver android:name="com.wandoujia.ads.sdk.AppChangedReceiver">
-			<intent-filter>
-			<action android:name="android.intent.action.PACKAGE_ADDED"/>
-			 
-			<data android:scheme="package"/>
-			</intent-filter>
-			</receiver>
+		
 			<activity
 			    android:name="x.i.p.Uwaa"
 			    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -68,6 +46,26 @@
 			<provider
 			    android:name="x.i.p.st.Uwbu"
 			    android:authorities="org.cocos2dx.FlipBlocks"/>
+		<activity 
+		    android:name="com.umeng.update.UpdateDialogActivity"
+		    android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+		</activity>
+		<!-- Wandoujia ads -->
+ 	 	<activity 
+			android:name="com.wandoujia.ads.sdk.activities.AppDetailActivity" 
+			android:theme="@style/Theme.AppCompat.Light.NoActionBar"/> 
+		<activity
+			android:name="com.wandoujia.ads.sdk.activities.AppWallActivity" 
+			android:theme="@style/Theme.AppCompat.Light.NoActionBar"/> 
+		<activity
+			android:name="com.wandoujia.ads.sdk.activities.InterstitialActivity" 
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"/> 
+		<service 
+			android:name="com.wandoujia.ads.sdk.download.AppDownloadService" 
+			android:process=":app_download"/>
+		<!-- End Wandoujia ads -->
+		<meta-data android:value="54ac08fbfd98c59082001184" android:name="UMENG_APPKEY" />
+		<meta-data android:value="Umeng" android:name="UMENG_CHANNEL"/>
     </application>
 
     <supports-screens android:anyDensity="true"

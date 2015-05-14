@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@id/wdj_ad_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <FrameLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@id/wdj_ad_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxEms="8"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:id="@id/wdj_ad_sub_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:scrollbars="none">
+
+                        <TextView
+                            android:id="@id/wdj_ad_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#737373"/>
+                    </ScrollView>
+
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@id/wdj_ad_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/interstitial_close_non_banner"
+                    android:visibility="gone"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="3dp">
+
+            <Button
+                android:id="@id/wdj_ad_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:text="@string/cancel"
+                android:textColor="#777777"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@id/wdj_ad_install"
+                style="@style/InstallButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="25dp"
+                android:padding="5dp"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
+<!-- From: file:/Users/afpro/Desktop/Project/wandoujia/NewSdk/sdk/src/main/res/layout/confirm_download.xml -->

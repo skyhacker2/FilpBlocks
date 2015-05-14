@@ -44,13 +44,22 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.FrameLayout.LayoutParams;
+
+import com.eleven.game.libpluginutils.facade.Facade;
+import com.sbstrm.appirater.Appirater;
+import com.wandoujia.ads.sdk.Ads;
+import com.wandoujia.ads.sdk.Ads.AdFormat;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
@@ -73,12 +82,41 @@ public class AppActivity extends Cocos2dxActivity{
 	static IAdManager mAdManager;
 	
 	static AppActivity mContext;
+	static boolean mInited = false;
+	private static View mBannerView;
+	
+	private AsyncTask<Void, Void, Boolean> task = new AsyncTask<Void, Void, Boolean>() {
+        @Override
+        protected Boolean doInBackground(Void... params) {
+        	try {
+    			Ads.init(mContext, "100012493", "223d23f882ab5aaec8b195d466380ee3");
+    			Ads.preLoad("3af78303f7473cc59a31b9a9dfadfd2f", AdFormat.banner);
+    			Ads.preLoad("0305179656226ea8b0a6be93180bbd53", AdFormat.appwall);
+    			
+    		} catch (Exception e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+            
+            return true;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean success) {
+            if (success) {
+                Log.d("AsyncTask", "初始化豌豆荚SDK成功");
+                mInited = true;
+                showAds();
+                //showBanner();
+            }
+        }
+    };
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		
+		Appirater.appLaunched(this);
 		mContext = this;
 		
 		if(nativeIsLandScape()) {
@@ -156,23 +194,35 @@ public class AppActivity extends Cocos2dxActivity{
 	}
 	public void appInit() {
 		mHandler = new Handler(this.getMainLooper());
+		mCopyFrameLayout = mFrameLayout;
 		//mAdManager = new org.cocos2dx.lua.WandoujiaAdManager(this, mFrameLayout);
-		mAdManager = new YoumiAdManager(this, mFrameLayout);
-		if (!mAdManager.init()) {
-			Log.d(TAG, "广告初始化失败");
-		} else {
-			//mAdManager.showBannerAd();
-		}
+		// 初始化豌豆荚广告
+		task.execute();
+		
+		Facade.init(mContext);
+		Facade.setAnalyticsKey("54ac08fbfd98c59082001184");
 	}
 	
 	// jni 显示广告
 	public static void showAds() {
 		Log.d(TAG, "显示广告");
+		if (!mInited) {
+			Log.d(TAG, "广告SDK还没有初始化完成");
+			return;
+		}
 		mHandler.post(new Runnable() {
 			
 			@Override
 			public void run() {
-				mAdManager.showBannerAd();
+				if (mBannerView != null) {
+					mCopyFrameLayout.removeView(mBannerView);
+				}
+				
+				mBannerView = Ads.createBannerView(mContext, "3af78303f7473cc59a31b9a9dfadfd2f");
+				FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, 160);
+				params.gravity = Gravity.BOTTOM;
+				mBannerView.setLayoutParams(params);
+				mCopyFrameLayout.addView(mBannerView);
 			}
 		});
 		
@@ -185,12 +235,26 @@ public class AppActivity extends Cocos2dxActivity{
 			
 			@Override
 			public void run() {
-				mAdManager.hideBannerAd();
+				// TODO Auto-generated method stub
+				if (mBannerView != null) {
+					mCopyFrameLayout.removeView(mBannerView);
+				}
 			}
 		});
-		
-		
 	}
+	
+	// jni 推荐墙
+	public static void showWall() {
+		Log.d(TAG, "推荐墙");
+		mHandler.post(new Runnable() {
+			
+			@Override
+			public void run() {
+				Ads.showAppWall(mContext, "0305179656226ea8b0a6be93180bbd53");
+			}
+		});
+	}
+	
 	// 评分
 	public static void rateApp() {
 		mHandler.post(new Runnable() {
@@ -294,6 +358,19 @@ public class AppActivity extends Cocos2dxActivity{
 		});
 		
 	}
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		Facade.onResume(this);
+	}
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		Facade.onPause(this);
+	}
+	
 	
 	
 }

@@ -22,6 +22,8 @@ public:
     void showAds();
     
     void hideAds();
+    
+    void showWall();
 };
 
 #endif /* defined(__SnakeGameLua__AdManager__) */
