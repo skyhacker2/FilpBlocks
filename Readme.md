@@ -17,3 +17,10 @@
 
 ![image](http://git.oschina.net/nov_eleven/photo/raw/master/flip.gif)
 [link](http://)
+
+#Release Notes
+
+##1.5
+
+1. 去除调试信息。
+2. 修改随机算法

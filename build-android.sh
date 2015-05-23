@@ -1,1 +1,1 @@
-python /Users/eleven/projects/cocos2d-x-3.1.1/tools/cocos2d-console/bin/cocos.py compile -s /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/ -p android --ap 19 -m release
+cocos compile -p android -m release --compile-script 0 -o /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks

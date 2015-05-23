@@ -166,10 +166,10 @@ function MainMenu:showSubMenu()
     self.simpleMenu:runAction(createMoveOutAction(cc.p(-120,y),0))
     
     x, y = self.mediumMenu:getPosition()
-    self.mediumMenu:runAction(createMoveOutAction(cc.p(-120,y),0.05))
+    self.mediumMenu:runAction(createMoveOutAction(cc.p(-120,y),0.03))
     
     x, y = self.hardMenu:getPosition()
-    self.hardMenu:runAction(createMoveOutAction(cc.p(-120,y),0.1))
+    self.hardMenu:runAction(createMoveOutAction(cc.p(-120,y),0.06))
     
     x, y = self.moreMenu:getPosition()
     self.moreMenu:runAction(createMoveOutAction(cc.p(-120,y),0.1))
@@ -204,7 +204,7 @@ function MainMenu:hideSubMenu()
     self.hardMenu:runAction(createMoveInAction(cc.p(ws.width/2,y),0.4))
 
     x, y = self.moreMenu:getPosition()
-    self.moreMenu:runAction(createMoveInAction(cc.p(ws.width/2,y),0.4))
+    self.moreMenu:runAction(createMoveInAction(cc.p(ws.width/2,y),0.5))
     
     x, y = self.settingMenu:getPosition()
     self.settingMenu:runAction(createMoveInAction(cc.p(x,200),0))

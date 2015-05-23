@@ -61,7 +61,9 @@ function MapLayer:initBlocks(opt)
     local startPty = self._bg:getPositionY() - self._bg:getContentSize().height/2 +
                      self._breakLength + blockSize/2
     local colorNum = cc.UserDefault:getInstance():getIntegerForKey("color_num",2)
-    print(colorNum)                         
+    print(colorNum)    
+    print("time:",  os.time())   
+    math.randomseed(tostring(os.time()):reverse():sub(1, 6))                    
     for i = 1, self._size do
         local y = startPty + (i-1) * blockSize + (i-1) * self._breakLength
         self._blocks[i] = {}

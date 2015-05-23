@@ -1,1 +1,1 @@
-python /Users/eleven/projects/cocos2d-x-3.1.1/tools/cocos2d-console/bin/cocos.py run -s /Users/eleven/projects/cocos2d-x-3.1.1/projects_lua/FlipBlocks/ -p android -ap 21
+cocos run -p android

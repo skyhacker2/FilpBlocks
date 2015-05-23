@@ -2,6 +2,8 @@ frameworks/cocos2d-x
 frameworks/runtime-src/proj.android/obj
 frameworks/runtime-src/proj.android/bin
 frameworks/runtime-src/proj.android/assets
+frameworks/runtime-src/eclipse_workspace/
+publish/
 runtime/
 
 .DS_Store

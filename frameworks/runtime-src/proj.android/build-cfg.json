@@ -7,8 +7,8 @@
     ],
     "copy_resources": [
         {
-            "from": "../../../bytecode",
-            "to": "bytecode",
+            "from": "../../../src",
+            "to": "src",
             "exclude": [
                 "*.gz"
             ]
@@ -20,7 +20,6 @@
                 "*.gz"
             ]
         }
-
     ],
     "must_copy_resources": [
         {

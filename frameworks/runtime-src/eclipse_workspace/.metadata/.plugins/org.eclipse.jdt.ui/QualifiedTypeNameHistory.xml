@@ -20,7 +20,6 @@
 <fullyQualifiedTypeName name="net.youmi.android.diy.banner.DiyAdSize"/>
 <fullyQualifiedTypeName name="com.wandoujia.ads.sdk.Ads"/>
 <fullyQualifiedTypeName name="android.view.ViewGroup.LayoutParams"/>
-<fullyQualifiedTypeName name="android.widget.FrameLayout.LayoutParams"/>
 <fullyQualifiedTypeName name="net.youmi.android.AdManager"/>
 <fullyQualifiedTypeName name="org.cocos2dx.lua.AdManager"/>
 <fullyQualifiedTypeName name="android.view.Gravity"/>
@@ -34,4 +33,7 @@
 <fullyQualifiedTypeName name="com.wandoujia.ads.sdk.loader.Fetcher.AdFormat"/>
 <fullyQualifiedTypeName name="org.cocos2dx.lua.WandoujiaAdManager"/>
 <fullyQualifiedTypeName name="com.eleven.game.libpluginutils.facade.Facade"/>
+<fullyQualifiedTypeName name="com.wandoujia.ads.sdk.Ads.AdFormat"/>
+<fullyQualifiedTypeName name="com.sbstrm.appirater.Appirater"/>
+<fullyQualifiedTypeName name="android.widget.FrameLayout.LayoutParams"/>
 </qualifiedTypeNameHistroy>
